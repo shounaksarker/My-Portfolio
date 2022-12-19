@@ -1,0 +1,8 @@
+.round::before{
+    content: "";
+    width: 150px;
+    position: absolute;
+    height: 120px;
+    border-radius: 50%;
+    top: 2%;
+}

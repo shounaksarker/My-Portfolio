@@ -1,0 +1,88 @@
+/* Estrutura */
+.inputContainer {
+  position: relative;
+  margin-bottom: 30px;
+  min-width: 48%;
+}
+
+.inputContainer input,
+.inputContainer textarea {
+  border: 0;
+  border-bottom: 2px solid #9e9e9e;
+  outline: none;
+  transition: 0.2s ease-in-out;
+  box-sizing: border-box;
+  border-radius: 10px;
+}
+
+.inputContainer label {
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 0px 15px;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  font-size: 1rem;
+  cursor: text;
+  transition: 0.2s ease-in-out;
+  box-sizing: border-box;
+}
+
+.inputContainer input,
+.inputContainer textarea,
+.inputContainer label {
+  width: 100%;
+  height: 3rem;
+  font-size: 1rem;
+}
+
+/* Interation */
+.inputContainer input:valid,
+.inputContainer textarea:valid,
+.inputContainer textarea:focus .inputContainer input:focus {
+  border-bottom: 2px solid #26a69a;
+}
+
+.inputContainer input:valid + label,
+.inputContainer input:focus + label,
+.inputContainer textarea:valid + label,
+.inputContainer textarea:focus + label {
+  color: #6c63ff;
+  font-size: 0.8rem;
+  top: -30px;
+  pointer-events: none;
+}
+
+.glassi {
+  /* background: linear-gradient(200deg, #a4f6ff52 0%, #6b63ff9f 100%); */
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+  border: 1px solid rgba(0, 0, 0, 0.4);
+}
+
+/*contact glass effect*/
+.glassi:hover .num{
+  transform: translateY(10%);
+  opacity: 1;
+  transition: all 0.7s ease-in-out;
+}
+.num{
+  transform: translateY(90%);
+  opacity: 0;
+}
+
+/* parallax tilt */
+
+.parallaxEffect {
+  justify-content: center;
+  align-items: center;
+  border: 2px solid black; 
+  border-radius: 20px;
+  transform-style: preserve-3d;
+}
+.parallaxEffect .inner-element {
+    transform: translateZ(60px);
+  }
