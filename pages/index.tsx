@@ -22,14 +22,14 @@ export default function Home() {
 
   const skillStyle = {
     background:
-      "url(https://pixabay.com/get/g8b58a63717aae2a5aa1945c3c86016cc6b6c8e43443dace1d385cafa60733eca500a3b8eb2801dab5a626cad4b67ded4.png)",
+      "url(https://i.ibb.co/TYL1TrZ/wordpress-3288417.png)",
     backgroundSize: "cover",
     backgroundPosition: "center center",
     backgroundAttachment: "fixed",
   };
   const achievementStyle = {
     background:
-      "url(https://pixabay.com/get/gd8be0ffc4bd715b83cbda052fb2d8ed2d32c3fc3904b833674df1aec12ab154523e9102fb42115339ad35f179a0138093acb4670cc47bb8f93755c0762ac2782_1920.jpg)",
+      "url(https://i.ibb.co/RSZD5rB/support-6773819.png)",
     backgroundSize: "cover",
     backgroundPosition: "center center",
     backgroundAttachment: "fixed",
