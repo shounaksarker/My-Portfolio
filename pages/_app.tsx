@@ -28,7 +28,7 @@ export default function App({ Component, pageProps }: AppProps) {
           <div className={`${showSidebar ? "block fixed min-w-[80%] md:max-w-[50%] z-40" : "hidden"} lg:block md:w-80 transition-all ease-in-out duration-300 delay-500`} >
             <Sidebar />
           </div>
-          <div className="w-full" onClick={()=>{setShowSidebar(!showSidebar)}}>
+          <div className="w-full" onClick={()=>{setShowSidebar(false)}}>
             <Component {...pageProps} />
             <Footer />
           </div>
