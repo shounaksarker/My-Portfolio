@@ -2,7 +2,7 @@
 import Head from "next/head";
 import Image from "next/image";
 import { useContext } from "react";
-import { SiTailwindcss } from "react-icons/si";
+import { SiTailwindcss, SiVercel } from "react-icons/si";
 import bootstrap from '../Imgs/Skills/bootstrap.png';
 import css from '../Imgs/Skills/css.png';
 import html5 from '../Imgs/Skills/html.png';
@@ -11,7 +11,6 @@ import mui from '../Imgs/Skills/mui.png';
 import rRouter from '../Imgs/Skills/react-router.png';
 import reactjs from '../Imgs/Skills/react.png';
 import sass from '../Imgs/Skills/sass.png';
-
 import cpp from '../Imgs/Skills/c++.png';
 import express from '../Imgs/Skills/express.png';
 import firebase from '../Imgs/Skills/fireabse.png';
@@ -22,6 +21,8 @@ import mongo from '../Imgs/Skills/mongodb.png';
 import node from '../Imgs/Skills/nodejs.png';
 import ps from '../Imgs/Skills/ps.png';
 import xd from '../Imgs/Skills/xd.png';
+import next from '../Imgs/Skills/next.png';
+import vercel from '../Imgs/Skills/vercel.png';
 import wordpress from '../Imgs/Skills/wordpress.png';
 import { AppContext } from "./_app";
 const Skills = () => {
@@ -78,10 +79,15 @@ const Skills = () => {
                     React
                 </div>
                 <div className='flex justify-start items-center text-xl'>
+                    <Image src={next} alt="images" className='mr-4' width={30}/>
+                    Next Js
+                </div>
+                <div className='flex justify-start items-center text-xl'>
                     <Image src={rRouter} alt="images" className='mr-4' width={40}/>
                     React Router
                 </div>
             </div>
+
             {/* 2nd box - backend + hosting  */}
             <div className='flex flex-col justify-between space-y-10 md:space-y-0 md:h-[550px] md:w-[32%]'>
               {/* backend */}
@@ -115,8 +121,13 @@ const Skills = () => {
                     <Image src={github} alt="images" className='mr-4' width={40}/>
                     Github pages
                 </div>
+                <div className='flex justify-start items-center text-xl'>
+                    <Image src={vercel} alt="images" className='mr-4' width={40}/>
+                    Vercel
+                </div>
               </div>
             </div>
+
             {/* 3rd div */}
             <div className='flex flex-col justify-between space-y-10 md:space-y-0 md:h-[550px] md:w-[32%]'>
               {/* language */}

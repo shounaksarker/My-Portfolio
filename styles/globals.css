@@ -1,10 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Clicker+Script&family=Oleo+Script+Swash+Caps&family=Poppins:ital,wght@0,300;0,500;0,600;1,800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Clicker+Script&family=Oleo+Script+Swash+Caps&family=Poppins:ital,wght@0,300;0,500;0,600;1,800&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer components {
-  
   progress {
     position: fixed;
     top: 0;
@@ -16,22 +15,36 @@
     border: none;
     background: transparent;
   }
-  
+
   progress::-webkit-progress-bar {
     background: transparent;
   }
-  
+
   progress::-webkit-progress-value {
-    background: linear-gradient(to left, #db38b5, #01b3e3, #25ce7b, #fdc741, #ff6b01, #fc4236);
+    background: linear-gradient(
+      to left,
+      #db38b5,
+      #01b3e3,
+      #25ce7b,
+      #fdc741,
+      #ff6b01,
+      #fc4236
+    );
     background-attachment: fixed;
   }
-  
+
   progress::-moz-progress-bar {
-    background: linear-gradient(to left, #db38b5, #01b3e3, #25ce7b, #fdc741, #ff6b01, #fc4236);
+    background: linear-gradient(
+      to left,
+      #db38b5,
+      #01b3e3,
+      #25ce7b,
+      #fdc741,
+      #ff6b01,
+      #fc4236
+    );
     background-attachment: fixed;
   }
-
-
 
   .customBeforeAfter::before {
     content: "";
@@ -76,10 +89,4 @@
     top: 0;
     right: 0;
   }
-
-
-  /*test*/
-  
-
-  
 }

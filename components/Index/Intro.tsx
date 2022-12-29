@@ -2,7 +2,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import Button from "../../helperComponent/Button";
-import me from "../../Imgs/snkH.png";
+import me from "../../Imgs/Others/snkH.png";
 import style from "../../styles/index.module.css";
 
 const Intro = () => {
@@ -21,9 +21,8 @@ const Intro = () => {
         <h3 className="text-xl md:text-2xl xl:text-4xl">
           Professional Web Developer
         </h3>
-        <h4 className="text-xl md:text-2xl my-12">
-          I am happy to intoduce myself as a React Developer and working on
-          React more than two years.
+        <h4 className="text-xl md:text-2xl font-light my-12">
+        I am a hardworking, honest, always willing to learn new skills and technologies, friendly, helpful, polite and  a good listener. To fulfill my object, I am outgoing, tactful and able to listen effectively when solving problems.
         </h4>
         <div className="flex space-x-2 md:space-x-6">
           <Button className="btn btn-primary">

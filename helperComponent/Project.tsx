@@ -36,10 +36,10 @@ const Project = ({
 
             <div className="mt-5 md:mt-6">
               <button className="btn btn-primary mr-5">
-                <Link href={repository}>Repository</Link>
+                <Link target="_blank" href={repository}>Repository</Link>
               </button>
               <button className="btn btn-primary">
-                <Link href={demo}>Demo</Link>
+                <Link target="_blank" href={demo}>Demo</Link>
               </button>
             </div>
           </div>

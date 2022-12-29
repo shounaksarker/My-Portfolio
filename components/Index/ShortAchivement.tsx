@@ -1,10 +1,10 @@
 import Image from "next/image";
 import { useContext } from "react";
 import Link from "next/link";
-import all from "../../Imgs/allCourses.png";
-import fed from "../../Imgs/FED.jpeg";
-import PWJ from "../../Imgs/PWJ.jpeg";
-import RB from "../../Imgs/RB.jpeg";
+import all from "../../Imgs/Others/allCourses.png";
+import fed from "../../Imgs/Others/FED.jpeg";
+import PWJ from "../../Imgs/Others/PWJ.jpeg";
+import RB from "../../Imgs/Others/RB.jpeg";
 import { AppContext } from "../../pages/_app";
 import style from "../../styles/component.module.css";
 

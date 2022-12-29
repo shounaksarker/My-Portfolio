@@ -14,7 +14,7 @@ import others from "../Imgs/Photography/leg.jpeg";
 import Head from "next/head";
 import { useContext, useState } from "react";
 import SingleGallery from "../helperComponent/SingleGallery";
-import education from '../Imgs/education.png';
+import education from '../Imgs/Others/education.png';
 import { AppContext } from "../pages/_app";
 // ------------------------------------------------------------------------------
 const Aboutme = () => {
@@ -182,16 +182,16 @@ const Aboutme = () => {
       original: "https://i.ibb.co/ggygRwn/boat-Padma.jpg",
       width: 250,
       height: 174,
-      tags: [{ value: "boat", title: "India" }, ,],
-      caption: "Tea Garden, Darjeling, India",
+      tags: [{ value: "boat", title: "Padma River" }, ,],
+      caption: "Padma River, Bangladesh",
     },
     {
       src: "https://i.ibb.co/XY0jfW4/padmaB.jpg",
       original: "https://i.ibb.co/XY0jfW4/padmaB.jpg",
       width: 200,
       height: 148,
-      tags: [{ value: "padma bridge", title: "India" }],
-      caption: "MG Marg Road, Gangtok, India",
+      tags: [{ value: "padma bridge", title: "Bangladesh" }],
+      caption: "Padma Bridge, Bangladesh",
     },
     {
       src: "https://i.ibb.co/yk1pRW1/saintB.jpg",
@@ -209,8 +209,8 @@ const Aboutme = () => {
       alt: "Wood Glass",
       width: 400,
       height: 320,
-      tags: [{ value: "tree", title: "India" }],
-      caption: "Mall Road, Darjeeling, India",
+      tags: [{ value: "tree", title: "Bangladesh" }],
+      caption: "Sunset",
     },
     {
       src: "https://i.ibb.co/fHyF4rn/DarjNn.jpg",
@@ -219,7 +219,7 @@ const Aboutme = () => {
       width: 600,
       height: 320,
       tags: [{ value: "Darjeeling", title: "India" }],
-      caption: "Tea Garden, Darjeeling, India",
+      caption: "Tista river with cloud, Gangtok, India",
     },
 
     {
@@ -227,8 +227,8 @@ const Aboutme = () => {
       original: "https://i.ibb.co/ZdBbbMQ/darjn.jpg",
       width: 250,
       height: 213,
-      tags: [{ value: "Darjeeling", title: "Bangladesh" }, ,],
-      caption: "Saint Martin, Coal Island, Bangladesh",
+      tags: [{ value: "Darjeeling", title: "India" }, ,],
+      caption: "Clouds over tea garden, Darjeeling",
     },
   ];
   const animalPic = [
@@ -237,8 +237,8 @@ const Aboutme = () => {
       original: "https://i.ibb.co/mJbLn61/cat.jpg",
       width: 290,
       height: 212,
-      tags: [{ value: "Cat", title: "India" }, ,],
-      caption: "Sikkim, India",
+      tags: [{ value: "Cat", title: "bd" }, ,],
+      caption: "Love of mother cat",
     },
     {
       src: "https://i.ibb.co/8bP7RtQ/bird.jpg",
@@ -247,7 +247,7 @@ const Aboutme = () => {
       width: 350,
       height: 320,
       tags: [{ value: "Bird", title: "India" }],
-      caption: "MG marg statue, Gangtok, India",
+      caption: "Bird showpiece",
     },
   ];
   const othersPic = [
@@ -256,8 +256,8 @@ const Aboutme = () => {
       original: "https://i.ibb.co/g3X9N1g/csma.jpg",
       width: 292,
       height: 213,
-      tags: [{ value: "chosma", title: "India" }],
-      caption: "Tista River, India",
+      tags: [{ value: "chosma", title: "BD" }],
+      caption: "River scenario without glass",
     },
     {
       src: "https://i.ibb.co/JBLWtSz/leg.jpg",
@@ -266,7 +266,7 @@ const Aboutme = () => {
       width: 400,
       height: 320,
       tags: [{ value: "Leg", title: "India" }],
-      caption: "Sikkim, India",
+      caption: "Walk Alone to the sea",
     },
     {
       src: "https://i.ibb.co/yXp9xk4/sgr.jpg",
@@ -274,7 +274,7 @@ const Aboutme = () => {
       width: 400,
       height: 212,
       tags: [{ value: "Gopalganj", title: "Bangladesh" }, ,],
-      caption: "Gopalganj, Bangladesh",
+      caption: "Childhood Game",
     },
   ];
   return (
@@ -297,31 +297,29 @@ const Aboutme = () => {
           {/* ====== about me text ====== */}
           <div className="text-lg md:text-xl font-thin text-justify mt-8 mb-12 leading-7">
             <p className="mb-5">
-              My name's Shounak. I'm a basically part-time front end web
+              My name is Shounak. I'm a basically part-time front end web
               developer and full time student based in Dhaka, Bangladesh.
               Currently I'm doing my B.Sc. (Hons.) in Electronics and
-              Communication Engineering. During the day I spend most of the time
-              in class and bus.
+              Communication Engineering. Most probably my B.Sc will be finised around july, 2023.
             </p>
             {/* <blockquote className='mx-[10%] my-[2%] p-[3%] bg-[#ededed] shadow-inner shadow-slate-400'>
             By the way You are going to read about me. Not about my skills. If you want to skip this page and know about my skills then go to SKILL page.
           </blockquote> */}
             <p className="mb-5">
               Though class lectures are about electrical and electronics based
-              but I would like to read programming related topic, blog or
+              but I like to read programming related topics, blogs or
               articles. Want to know about a interesting line about me? "I love
-              traffic jam..." Funny, right? Yeah, in that time i can think or
-              learn new thing, can take rest or listening music. I learnt
-              JavaScript's basic within this traffic jam. And yeah, after that,
-              during evening time I spend my time by doing tuition.
+              traffic jam..." Funny...!! &#128518; Yeah, in that time I can think or
+              learn new things, can take rest after working at night. I learnt
+              JavaScript's basic within this traffic jam.
             </p>
             <p className="mb-5">
               Basically I'm fast learner and very keen to learn. Obviously not
               any bookish element. I'm keen to learn new and trendy technology.
-              Recently learn : React, Sass/Scss, GSAP (js library), Adobe xd.
+              Recently learnt: React, NextJs, Sass/Scss, GSAP, Adobe xd and Tailwind Css.
               I'm ready to take any side project. If you want to contact with
-              me, don't hesitate. And last, I like coffee. Don't think twice to
-              offer me a coffee for any kind of query. Just knock me.
+              me, please don't hesitate. And last, I like coffee. Don't think twice to
+              offer me a coffee for any kind of query. &#128540; Just knock me.
             </p>
           </div>
 
@@ -330,7 +328,7 @@ const Aboutme = () => {
           <section>
             {/* steps  */}
             <div className="container px-5 pt-12 pb-24 mx-auto flex flex-wrap">
-              <div className="flex flex-wrap w-full justify-around">
+              <div className="flex flex-wrap w-full justify-around items-center">
                 {/* left div - step  */}
                 <div className="md:w-3/5 md:pr-10 md:py-6">
                   <div className="flex relative pb-12 ">

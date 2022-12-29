@@ -4,6 +4,7 @@ import Project from "../helperComponent/Project";
 import auth from "../Imgs/portfolio/auth.png";
 import blood from "../Imgs/portfolio/blood.png";
 import netflix from "../Imgs/portfolio/netflix.png";
+import management from "../Imgs/portfolio/management.png";
 import numberGuess from "../Imgs/portfolio/numberGuess.png";
 import powerOdd from "../Imgs/portfolio/powerOdd.png";
 import weather from "../Imgs/portfolio/weather.png";
@@ -30,76 +31,86 @@ const Portfolio = () => {
             interested to hire me
           </h4>
           {/* portfolio start */}
-          <div className="mt-12 text-lg md:flex md:flex-wrap">
-            {/* 1st project */}
+          <div className="mt-12 text-lg md:flex md:flex-wrap gap-4">
+            {/* Management app */}
             <Project
-              img={weather}
-              title="Weather App"
-              overview="This full stack website is made for taking appointment and save patient's info in database."
-              technology="React, Firebase, Node, Heroku, MongoDB."
-              repository="/repo"
-              demo="/demo"
-              className="bg-[#6c63ff14] md:mr-6 xl:mr-5"
+              img={management}
+              title="Management App"
+              overview="A management app for tracing all income and expense of a religious organization."
+              technology="Next.JS, Firebase,TypeScipt, Tailwind Css, Prisma."
+              repository="https://github.com/shounaksarker/ManagementApp"
+              demo="https://temp-manage.vercel.app"
+              className="bg-[#6c63ff14] "
             />
-            {/* 2nd project */}
+            {/* Netflix */}
             <Project
               img={netflix}
               title="Netflix"
-              overview="This full stack website is made for taking appointment and save patient's info in database."
-              technology="React, Firebase, Node, Heroku, MongoDB."
-              repository="/About"
-              demo="/demo"
-              className="xl:mr-5"
+              overview="A website where user can watch the trailer of new trendy movie or series."
+              technology="React, Firebase, Flex-box, React-youtube."
+              repository="https://github.com/shounaksarker/Netflix-clone"
+              demo="https://netflix-snk.web.app/"
+              className=""
             />
-            {/* 3rd project */}
+            {/* Weather App */}
+            <Project
+              img={weather}
+              title="Weather App"
+              overview="This app shows weather details of the day and next 3 days of a city with Bg-img."
+              technology="React, Bootstrap."
+              repository="https://github.com/shounaksarker/weatherApp"
+              demo="https://web-app-snk.netlify.app/"
+              className="bg-[#6c63ff14]"
+            />
+            {/* Number Guess Game */}
             <Project
               img={numberGuess}
               title="Number Guess Game"
-              overview="This full stack website is made for taking appointment and save patient's info in database."
-              technology="React, Firebase, Node, Heroku, MongoDB."
-              repository="/repo"
-              demo="/demo"
-              className="bg-[#6c63ff14] md:mr-6 xl:mr-5"
+              overview="In this game user gets clue and have to predict the number."
+              technology="React, React-router, Bootstrap."
+              repository="https://number-guess-snk.netlify.app/"
+              demo="https://github.com/shounaksarker/Number-guess-game"
+              className=""
             />
-            {/* 4th project */}
+            {/* Authentication */}
             <Project
               img={auth}
               title="Authentication"
-              overview="This full stack website is made for taking appointment and save patient's info in database."
-              technology="React, Firebase, Node, Heroku, MongoDB."
-              repository="/repo"
-              demo="/demo"
-              className=""
+              overview="User can create account with email and password, and Log in with google."
+              technology="React, Firebase, Bootstrap, React Router"
+              repository="https://github.com/shounaksarker/Authentication"
+              demo="https://auth-snk.web.app/"
+              className="bg-[#6c63ff14] "
             />
-            {/* 5th project */}
-            <Project
-              img={blood}
-              title="Blood Bank"
-              overview="This full stack website is made for taking appointment and save patient's info in database."
-              technology="React, Firebase, Node, Heroku, MongoDB."
-              repository="/repo"
-              demo="/demo"
-              className="bg-[#6c63ff14] md:mr-6 xl:mr-5"
-            />
-            {/* 6th project */}
+            {/* PowerOdd */}
             <Project
               img={powerOdd}
               title="OTP - Authentication"
-              overview="This full stack website is made for taking appointment and save patient's info in database."
-              technology="React, Firebase, Node, Heroku, MongoDB."
-              repository="/repo"
-              demo="/demo"
-              className="xl:mr-5"
+              overview="Signup Through Phone OTP"
+              technology="React, Firebase, Bootstrap, React Router."
+              repository="https://github.com/shounaksarker/phone-authentication"
+              demo="https://phone-auth-snk.web.app "
+              className=""
             />
-            {/* 7th project */}
+            {/* Doctor's Portal */}
             <Project
               img={doctor}
               title="Doctor's Portal"
               overview="This full stack website is made for taking appointment and save patient's info in database."
-              technology="React, Firebase, Node, Heroku, MongoDB."
-              repository="/repo"
-              demo="/demo"
-              className="bg-[#6c63ff14] md:mr-6 xl:mr-5"
+              technology="React, Firebase, Node, Express, Heroku, MongoDB."
+              repository="https://github.com/shounaksarker/doctors-portal"
+              demo="https://doctor-s-portal-snk.web.app/"
+              className="bg-[#6c63ff14] "
+            />
+            {/* Blood App */}
+            <Project
+              img={blood}
+              title="Blood Bank"
+              overview="To create a profile for donating blood"
+              technology="React, Firebase, Firebase hosting, React-hook-form"
+              repository="https://github.com/shounaksarker/Blood-bank"
+              demo="https://blood-app-snk.web.app/"
+              className=""
             />
           </div>
         </div>

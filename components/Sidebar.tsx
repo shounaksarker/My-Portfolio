@@ -6,16 +6,16 @@ import { GiSkills } from "react-icons/gi";
 import { IoIosContact } from "react-icons/io";
 import { MdSettingsSuggest } from "react-icons/md";
 import { TfiHome } from "react-icons/tfi";
-import coding from "../Imgs/coding.svg";
-import codingGreen from "../Imgs/codingGreen.svg";
-import codingOrange from "../Imgs/codingOrange.svg";
-import codingPink from "../Imgs/codingPink.svg";
-import codingWhite from "../Imgs/codingWhite.svg";
+import coding from "../Imgs/SVG/coding.svg";
+import codingGreen from "../Imgs/SVG/codingGreen.svg";
+import codingOrange from "../Imgs/SVG/codingOrange.svg";
+import codingPink from "../Imgs/SVG/codingPink.svg";
+import codingWhite from "../Imgs/SVG/codingWhite.svg";
 import { AppContext } from "../pages/_app";
+import  style  from "../styles/component.module.css";
  
 const Sidebar = () => {
-  const [myTheme, setMyTheme, showSidebar, setShowSidebar] = useContext<any>(AppContext);
-  console.log("theme: ", myTheme);
+  const [myTheme, setMyTheme, , setShowSidebar] = useContext<any>(AppContext);
   const [ddHide, setddHide] = useState(true)
   // ###### funtion for changing theme ######
   const handleTheme = (value: string) => {
@@ -49,32 +49,32 @@ const Sidebar = () => {
         </div>
       </div>
       <div className="flex items-center">
-        <ul className="space-y-5 xl:space-y-8 text-lg xl:text-xl">
+        <ul className={`${style.linkHover} space-y-5 xl:space-y-8 text-lg xl:text-xl`}>
           <li>
-            <Link onClick={()=>{setShowSidebar(false)}} href={"/"} className="flex items-center">
+            <Link onClick={()=>{setShowSidebar(false)}} href={"/"} className="flex items-center before:bg-primary">
               <TfiHome className="mr-4" /> Home
             </Link>
           </li>
           <li>
-            <Link onClick={()=>{setShowSidebar(false)}} href={"/About"} className="flex items-center">
+            <Link onClick={()=>{setShowSidebar(false)}} href={"/About"} className="flex items-center before:bg-primary">
               <IoIosContact className="mr-4" />
               About
             </Link>
           </li>
           <li>
-            <Link onClick={()=>{setShowSidebar(false)}} href={"/Skills"} className="flex items-center">
+            <Link onClick={()=>{setShowSidebar(false)}} href={"/Skills"} className="flex items-center before:bg-primary">
               <GiSkills className="mr-4" />
               Skills
             </Link>
           </li>
           <li>
-            <Link onClick={()=>{setShowSidebar(false)}} href={"/Portfolio"} className="flex items-center">
+            <Link onClick={()=>{setShowSidebar(false)}} href={"/Portfolio"} className="flex items-center before:bg-primary">
               <BsClipboardData className="mr-4" />
               Portfolio
             </Link>
           </li>
           <li >
-            <Link onClick={()=>{setShowSidebar(false)}} href={"/Contact"} className="flex items-center">
+            <Link onClick={()=>{setShowSidebar(false)}} href={"/Contact"} className="flex items-center before:bg-primary">
               <BsChatRightDots className="mr-4" />
               Contact
             </Link>

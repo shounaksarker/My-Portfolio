@@ -6,3 +6,24 @@
     border-radius: 50%;
     top: 2%;
 }
+
+/* for hovering Nav Links*/
+
+.linkHover li{
+    position: relative;
+}
+.linkHover a:before {
+    content: "";
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    /* background: #492059; */
+    transform: scaleX(0);
+    position: absolute;
+    transition: transform .5s ease;
+  }
+  .linkHover a:hover:before{
+    transform: scaleX(1);
+  }
+

@@ -1,9 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
-import all from "../../Imgs/allProjectText.png";
-import auth from "../../Imgs/auth.png";
-import blood from "../../Imgs/blood.png";
-import powerOdd from "../../Imgs/powerodd.png";
+import all from "../../Imgs/Others/allProjectText.png";
+import management from "../../Imgs/portfolio/management.png";
+import netflix from "../../Imgs/portfolio/netflix.png";
+import numberGuess from "../../Imgs/portfolio/numberGuess.png";
 import style from "../../styles/component.module.css";
 import st from "../../styles/contact.module.css"
 
@@ -22,51 +22,52 @@ const SortPortfolio = () => {
           {/* 1st project */}
           <div className={`md:w-[48%] xl:w-[23%] card bg-base-100 shadow-xl md:mr-6 xl:mr-0 ${st.glassi} bg-[#ffffff1a]`}>
             <figure>
-              <Image height={200} src={auth} alt="Album" />
+              <Image height={180}  src={management} alt="Album" />
             </figure>
             <div className="card-body">
-              <h2 className="card-title text-primary">Authentication</h2>
+              <h2 className="card-title text-primary">Management App</h2>
               <p className="">
-                <strong className="underline">Required Technologies: </strong>React.js, Firebase Auth,
-                Bootstrap, React-Router
+                <strong className="underline">Required items: </strong>Next.js, Firebase Auth,
+                Tailwind Css, TypeScript, Prisma
               </p>
               <div className="card-actions justify-end">
-                <Link href='https://auth-snk.web.app/'><button className="btn btn-primary">Live</button></Link>
+                <Link target="_blank" href='https://temp-manage.vercel.app/'><button className="btn btn-primary">Live</button></Link>
               </div>
             </div>
           </div>
+
           {/* 2nd project */}
           <div className={`md:w-[48%] xl:w-[23%] card bg-base-100 shadow-xl shadow-primary ${st.glassi} bg-[#ffffff1a]`}>
             <figure>
-              <Image height={200} src={blood} alt="Album" />
+              <Image height={200} src={netflix} alt="Album" />
             </figure>
             <div className="card-body">
-              <h2 className="card-title text-primary">Blood App</h2>
+              <h2 className="card-title text-primary">Netflix-clone</h2>
               <p className="">
-                <strong className="underline">Required Technologies: </strong>React.js, Firebase Auth,
-                Bootstrap, React-Router, Firebase Database and Hosting
+                <strong className="underline">Required items: </strong>React JS, React-YouTube, Movie-Trailer, Flex-box, Firebase
               </p>
               <div className="card-actions justify-end">
-                <Link href='https://blood-app-snk.web.app'><button className="btn btn-primary">Live</button></Link>
+                <Link target="_blank" href='https://netflix-snk.web.app/'><button className="btn btn-primary">Live</button></Link>
               </div>
             </div>
           </div>
+
           {/* 3rd project */}
           <div className={`md:w-[48%] xl:w-[23%] card bg-base-100 shadow-xl shadow-primary md:mr-6 xl:mr-0 ${st.glassi} bg-[#ffffff1a]`}>
             <figure>
-              <Image height={200} src={powerOdd} alt="Album" />
+              <Image height={200} src={numberGuess} alt="Album" />
             </figure>
             <div className="card-body">
-              <h2 className="card-title text-primary">PowerOdd - (OTP)</h2>
+              <h2 className="card-title text-primary">Number Guessing Game</h2>
               <p className="">
-                <strong className="underline">Required Technologies: </strong>React.js, Firebase Auth,
-                Bootstrap, React-Router
+                <strong className="underline">Required items: </strong>React.js, React-Bootstrap, React-Router
               </p>
               <div className="card-actions justify-end">
-                <Link href='https://phone-auth-snk.web.app'><button className="btn btn-primary">Live</button></Link>
+                <Link target="_blank" href='https://number-guess-snk.netlify.app/'><button className="btn btn-primary">Live</button></Link>
               </div>
             </div>
           </div>
+
           {/* all project */}
           <div className={`md:w-[48%] xl:w-[23%] card bg-base-100 shadow-xl shadow-primary ${st.glassi} bg-[#ffffff1a]`}>
             <figure>

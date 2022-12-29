@@ -3,11 +3,11 @@ import ProgressBar from "@ramonak/react-progress-bar";
 import Image from "next/image";
 import Link from "next/link";
 import Button from "../../helperComponent/Button";
-import skill from "../../Imgs/skill.svg";
-import skillGreen from "../../Imgs/skillGreen.svg";
-import skillWhite from "../../Imgs/skillWhite.svg";
-import skillOrange from "../../Imgs/skillOrange.svg";
-import skillPink from "../../Imgs/skillPink.svg";
+import skill from "../../Imgs/SVG/skill.svg";
+import skillGreen from "../../Imgs/SVG/skillGreen.svg";
+import skillWhite from "../../Imgs/SVG/skillWhite.svg";
+import skillOrange from "../../Imgs/SVG/skillOrange.svg";
+import skillPink from "../../Imgs/SVG/skillPink.svg";
 import { useContext } from "react";
 import { AppContext } from "../../pages/_app";
 import style from "../../styles/component.module.css";
@@ -49,7 +49,7 @@ const ShortSkill = () => {
                 className="mb-3"
               />
               <ProgressBar
-                completed={60}
+                completed={70}
                 bgColor="#38BDF8"
                 borderRadius="20px"
                 labelAlignment="left"
@@ -82,13 +82,13 @@ const ShortSkill = () => {
                 className="mb-3"
               />
               <ProgressBar
-                completed={70}
+                completed={78}
                 bgColor="#5ED3F3"
                 borderRadius="20px"
                 labelAlignment="left"
                 baseBgColor="#e8e8e6"
                 labelColor="#000000"
-                customLabel="React Js"
+                customLabel="React / Next js"
                 height="26px"
                 className="mb-3"
               />
@@ -99,18 +99,40 @@ const ShortSkill = () => {
                 labelAlignment="left"
                 baseBgColor="#e8e8e6"
                 labelColor="#000000"
-                customLabel="Node Js / Express / MongoDB"
+                customLabel="Node / Express"
                 height="26px"
                 className="mb-3"
               />
               <ProgressBar
                 completed={30}
+                bgColor="#429543"
+                borderRadius="20px"
+                labelAlignment="left"
+                baseBgColor="#e8e8e6"
+                labelColor="#fff"
+                customLabel="MongoDB"
+                height="26px"
+                className="mb-3"
+              />
+              <ProgressBar
+                completed={35}
                 bgColor="#207196"
                 borderRadius="20px"
                 labelAlignment="left"
                 baseBgColor="#e8e8e6"
                 labelColor="#fff"
-                customLabel="Python / C++ / Wordpress"
+                customLabel="Wordpress"
+                height="26px"
+                className="mb-3"
+              />
+              <ProgressBar
+                completed={30}
+                bgColor="#6295CB"
+                borderRadius="20px"
+                labelAlignment="left"
+                baseBgColor="#e8e8e6"
+                labelColor="#000"
+                customLabel="C++ / TS"
                 height="26px"
                 className="mb-3"
               />
