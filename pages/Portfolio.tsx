@@ -1,19 +1,19 @@
 /* eslint-disable react/no-unescaped-entities */
 import Head from "next/head";
+import { useContext } from "react";
 import Project from "../helperComponent/Project";
 import auth from "../Imgs/portfolio/auth.png";
 import blood from "../Imgs/portfolio/blood.png";
-import netflix from "../Imgs/portfolio/netflix.png";
 import management from "../Imgs/portfolio/management.png";
+import netflix from "../Imgs/portfolio/netflix.png";
 import numberGuess from "../Imgs/portfolio/numberGuess.png";
+import openai from "../Imgs/portfolio/openai.png";
 import powerOdd from "../Imgs/portfolio/powerOdd.png";
 import weather from "../Imgs/portfolio/weather.png";
-import doctor from "../Imgs/portfolio/doctor.png";
-import { useContext } from "react";
 import { AppContext } from "../pages/_app";
 
 const Portfolio = () => {
-  const [myTheme, ] = useContext<any>(AppContext);
+  const [myTheme] = useContext<any>(AppContext);
   return (
     <div>
       <Head>
@@ -23,9 +23,15 @@ const Portfolio = () => {
       </Head>
       <div className="lg:min-h-screen flex justify-center">
         <div className="p-8">
-        <h2 className={`font-oleo underline decoration-wavy decoration-2 text-7xl text-center text-primary ${(myTheme == "light") || (myTheme == "emerald") || (myTheme == "luxury") ? "drop-shadow-titleBlack" : "drop-shadow-titleWhite"}`} >
-          Portfolio
-        </h2>
+          <h2
+            className={`font-oleo underline decoration-wavy decoration-2 text-7xl text-center text-primary ${
+              myTheme == "light" || myTheme == "emerald" || myTheme == "luxury"
+                ? "drop-shadow-titleBlack"
+                : "drop-shadow-titleWhite"
+            }`}
+          >
+            Portfolio
+          </h2>
           <h4 className="text-lg text-center text-[#aeaeae]">
             Check my porjects with code and you can call me if you are
             interested to hire me
@@ -40,7 +46,7 @@ const Portfolio = () => {
               technology="Next.JS, Firebase,TypeScipt, Tailwind Css, Prisma."
               repository="https://github.com/shounaksarker/ManagementApp"
               demo="https://temp-manage.vercel.app"
-              className="bg-[#6c63ff14] "
+              bg
             />
             {/* Netflix */}
             <Project
@@ -50,7 +56,16 @@ const Portfolio = () => {
               technology="React, Firebase, Flex-box, React-youtube."
               repository="https://github.com/shounaksarker/Netflix-clone"
               demo="https://netflix-snk.web.app/"
-              className=""
+            />
+            {/* Image by AI */}
+            <Project
+              img={openai}
+              title="Image by AI"
+              overview="This website is made for generating image by human prompt (text to image) & variating image"
+              technology="React.js, Tailwind Css, Express.js, OpenAI"
+              repository="https://github.com/shounaksarker/ai-image-generator"
+              demo="https://aipicgen.onrender.com/"
+              bg
             />
             {/* Weather App */}
             <Project
@@ -60,7 +75,6 @@ const Portfolio = () => {
               technology="React, Bootstrap."
               repository="https://github.com/shounaksarker/weatherApp"
               demo="https://web-app-snk.netlify.app/"
-              className="bg-[#6c63ff14]"
             />
             {/* Number Guess Game */}
             <Project
@@ -70,7 +84,7 @@ const Portfolio = () => {
               technology="React, React-router, Bootstrap."
               repository="https://number-guess-snk.netlify.app/"
               demo="https://github.com/shounaksarker/Number-guess-game"
-              className=""
+              bg
             />
             {/* Authentication */}
             <Project
@@ -80,7 +94,6 @@ const Portfolio = () => {
               technology="React, Firebase, Bootstrap, React Router"
               repository="https://github.com/shounaksarker/Authentication"
               demo="https://auth-snk.web.app/"
-              className="bg-[#6c63ff14] "
             />
             {/* PowerOdd */}
             <Project
@@ -90,18 +103,9 @@ const Portfolio = () => {
               technology="React, Firebase, Bootstrap, React Router."
               repository="https://github.com/shounaksarker/phone-authentication"
               demo="https://phone-auth-snk.web.app "
-              className=""
+              bg
             />
-            {/* Doctor's Portal */}
-            <Project
-              img={doctor}
-              title="Doctor's Portal"
-              overview="This full stack website is made for taking appointment and save patient's info in database."
-              technology="React, Firebase, Node, Express, Heroku, MongoDB."
-              repository="https://github.com/shounaksarker/doctors-portal"
-              demo="https://doctor-s-portal-snk.web.app/"
-              className="bg-[#6c63ff14] "
-            />
+
             {/* Blood App */}
             <Project
               img={blood}
@@ -110,7 +114,6 @@ const Portfolio = () => {
               technology="React, Firebase, Firebase hosting, React-hook-form"
               repository="https://github.com/shounaksarker/Blood-bank"
               demo="https://blood-app-snk.web.app/"
-              className=""
             />
           </div>
         </div>

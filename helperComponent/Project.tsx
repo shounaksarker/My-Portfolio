@@ -8,7 +8,7 @@ type propType = {
   technology: string;
   repository: string;
   demo: string;
-  className: string;
+  bg?: any;
 };
 
 const Project = ({
@@ -18,13 +18,13 @@ const Project = ({
   technology,
   repository,
   demo,
-  className,
+  bg,
 }: propType) => {
   return (
     <div
       className={`md:w-[48%] xl:w-[31%] 2xl:w-[24%] mb-16 py-4 shadow-skill shadow-[#707070] ${
         style.center
-      } ${className ? className : ""}`}
+      } ${bg ? "bg-[#6c63ff14]" : ""}`}
     >
       <div className={`${style.frontFace}`}>
         <div className={`${style.front} ${style.content}`}>

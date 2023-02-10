@@ -3,7 +3,7 @@ import Link from "next/link";
 import all from "../../Imgs/Others/allProjectText.png";
 import management from "../../Imgs/portfolio/management.png";
 import netflix from "../../Imgs/portfolio/netflix.png";
-import numberGuess from "../../Imgs/portfolio/numberGuess.png";
+import openai from "../../Imgs/portfolio/openai.png";
 import style from "../../styles/component.module.css";
 import st from "../../styles/contact.module.css"
 
@@ -55,15 +55,15 @@ const SortPortfolio = () => {
           {/* 3rd project */}
           <div className={`md:w-[48%] xl:w-[23%] card bg-base-100 shadow-xl shadow-primary md:mr-6 xl:mr-0 ${st.glassi} bg-[#ffffff1a]`}>
             <figure>
-              <Image height={200} src={numberGuess} alt="Album" />
+              <Image height={200} src={openai} alt="Album" />
             </figure>
             <div className="card-body">
-              <h2 className="card-title text-primary">Number Guessing Game</h2>
+              <h2 className="card-title text-primary">Image by AI</h2>
               <p className="">
-                <strong className="underline">Required items: </strong>React.js, React-Bootstrap, React-Router
+                <strong className="underline">Required items: </strong>React.js, Tailwind Css, Express.js, OpenAI
               </p>
               <div className="card-actions justify-end">
-                <Link target="_blank" href='https://number-guess-snk.netlify.app/'><button className="btn btn-primary">Live</button></Link>
+                <Link target="_blank" href='https://aipicgen.onrender.com/'><button className="btn btn-primary">Live</button></Link>
               </div>
             </div>
           </div>
