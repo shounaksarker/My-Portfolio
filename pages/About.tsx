@@ -16,6 +16,7 @@ import { useContext, useState } from "react";
 import SingleGallery from "../helperComponent/SingleGallery";
 import education from '../Imgs/Others/education.png';
 import { AppContext } from "../pages/_app";
+
 // ------------------------------------------------------------------------------
 const Aboutme = () => {
   const [myTheme, ] = useContext<any>(AppContext);

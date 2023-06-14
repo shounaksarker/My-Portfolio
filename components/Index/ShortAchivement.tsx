@@ -1,15 +1,40 @@
 import Image from "next/image";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import Link from "next/link";
 import all from "../../Imgs/Others/allCourses.png";
+import mine from "../../Imgs/portfolio/mine.png";
 import fed from "../../Imgs/Others/FED.jpeg";
 import PWJ from "../../Imgs/Others/PWJ.jpeg";
 import RB from "../../Imgs/Others/RB.jpeg";
 import { AppContext } from "../../pages/_app";
 import style from "../../styles/component.module.css";
+import SingleGallery from "../../helperComponent/SingleGallery";
 
 const ShortAchivement = () => {
-  const [myTheme, ] = useContext<any>(AppContext);
+  const [myTheme,] = useContext<any>(AppContext);
+  const [dOpen, setDOpen] = useState(false);
+
+  const myImgs = [
+    {
+      src: "https://i.ibb.co/xMf8dx7/IMG20230531134701-03.jpg",
+      original: "https://i.ibb.co/xMf8dx7/IMG20230531134701-03.jpg",
+      alt: "with Mayor",
+      width: 400,
+      height: 320,
+      tags: [{ value: "Darjeeling", title: "India" }],
+      caption: "Showing the Certificate verify project for the resident of ward no-5",
+    },
+    {
+      src: "https://i.ibb.co/tBrsspd/IMG-20230601-WA0000-01.jpg",
+      original: "https://i.ibb.co/tBrsspd/IMG-20230601-WA0000-01.jpg",
+      width: 250,
+      height: 174,
+      tags: [{ value: "Darjeling", title: "India" }, ,],
+      caption: "With Mayor, MP and Councilor",
+    },
+  ];
+
+
   return (
     <div className="w-full lg:flex lg:items-center lg:justify-center relative">
       <div
@@ -46,7 +71,7 @@ const ShortAchivement = () => {
             </label>
             {/* modal end  */}
 
-            <div className={`card-body ${(myTheme !== "luxury") && "text-white"}`}>
+            <div className={`card-body ${(myTheme !== "luxury") && "text-white"} ${(myTheme === "light") && "bg-white/50"}`}>
               <h2 className="card-title text-primary">
                 Introduction of Frontend development
               </h2>
@@ -93,7 +118,7 @@ const ShortAchivement = () => {
             </label>
             {/* modal end  */}
 
-            <div className={`card-body ${(myTheme !== "luxury") && "text-white"}`}>
+            <div className={`card-body ${(myTheme !== "luxury") && "text-white"} ${(myTheme === "light") && "bg-white/50"}`}>
               <h2 className="card-title text-primary">Programming With JavaScript</h2>
               <p>
                 <strong>Platform: </strong>Coursera
@@ -138,7 +163,7 @@ const ShortAchivement = () => {
             </label>
             {/* modal end  */}
 
-            <div className={`card-body ${(myTheme !== "luxury") && "text-white"}`}>
+            <div className={`card-body ${(myTheme !== "luxury") && "text-white"} ${(myTheme === "light") && "bg-white/50"}`}>
               <h2 className="card-title text-primary">React Basic</h2>
               <p>
                 <strong>Platform: </strong>Coursera
@@ -159,18 +184,21 @@ const ShortAchivement = () => {
             </div>
           </div>
           {/* last div  */}
-          <div className="md:w-[48%] xl:w-[23%] card bg-base-100 shadow-xl bg-[#ffffff1a]">
+          <div className="cursor-grabbing md:w-[48%] xl:w-[23%] card bg-base-100 shadow-xl bg-[#ffffff1a]" onClick={() => setDOpen(true)}>
             <figure>
-              <Image height={200} src={all} alt="Album" />
+              <Image  src={mine} alt="Album" />
+              <SingleGallery
+              images={myImgs}
+              open={dOpen}
+              setOpen={setDOpen}
+            />
             </figure>
-            <div className={`card-body ${(myTheme !== "luxury") && "text-white"}`}>
+            <div className={`card-body ${(myTheme !== "luxury") && "text-white"} ${(myTheme === "light") && "bg-white/50"}`}>
               <h2 className="card-title text-primary">
-                Another Certificates are ready for your concentration...
+                Showing the project "E-sheba" infront of
               </h2>
-              <p>One click for opening my certificate showcase...</p>
-              <div className="flex card-actions justify-end items-center">
-                <button className="btn btn-primary">Listen</button>
-              </div>
+              <p>the Mayor of Dhaka South City Corporation, MP and Councilor</p>
+              
             </div>
           </div>
         </div>
