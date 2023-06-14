@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { useContext, useState } from "react";
 import Link from "next/link";
-import all from "../../Imgs/Others/allCourses.png";
+// import all from "../../Imgs/Others/allCourses.png";
 import mine from "../../Imgs/portfolio/mine.png";
 import fed from "../../Imgs/Others/FED.jpeg";
 import PWJ from "../../Imgs/Others/PWJ.jpeg";
