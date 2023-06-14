@@ -3,7 +3,7 @@ import Link from "next/link";
 import all from "../../Imgs/Others/allProjectText.png";
 import management from "../../Imgs/portfolio/management.png";
 import netflix from "../../Imgs/portfolio/netflix.png";
-import openai from "../../Imgs/portfolio/openai.png";
+import certi from "../../Imgs/portfolio/certi.png";
 import style from "../../styles/component.module.css";
 import st from "../../styles/contact.module.css"
 
@@ -20,18 +20,17 @@ const SortPortfolio = () => {
         </h1>
         <div className="md:flex md:flex-wrap justify-center space-y-5 lg:space-y-0 xl:space-x-5">
           {/* 1st project */}
-          <div className={`md:w-[48%] xl:w-[23%] card bg-base-100 shadow-xl md:mr-6 xl:mr-0 ${st.glassi} bg-[#ffffff1a]`}>
+          <div className={`md:w-[48%] xl:w-[23%] card bg-base-100 shadow-xl shadow-primary md:mr-6 xl:mr-0 ${st.glassi} bg-[#ffffff1a]`}>
             <figure>
-              <Image height={180}  src={management} alt="Album" />
+              <Image height={200} src={certi} alt="Album" />
             </figure>
             <div className="card-body">
-              <h2 className="card-title text-primary">Management App</h2>
+              <h2 className="card-title text-primary">Certificate Verification</h2>
               <p className="">
-                <strong className="underline">Required items: </strong>Next.js, Firebase Auth,
-                Tailwind Css, TypeScript, Prisma
+                <strong className="underline">Required items: </strong>Next.js, Tailwind Css, React-QR-code
               </p>
               <div className="card-actions justify-end">
-                <Link target="_blank" href='https://temp-manage.vercel.app/'><button className="btn btn-primary">Live</button></Link>
+                <Link target="_blank" href='https://aipicgen.onrender.com/'><button className="btn btn-primary">Live</button></Link>
               </div>
             </div>
           </div>
@@ -53,17 +52,18 @@ const SortPortfolio = () => {
           </div>
 
           {/* 3rd project */}
-          <div className={`md:w-[48%] xl:w-[23%] card bg-base-100 shadow-xl shadow-primary md:mr-6 xl:mr-0 ${st.glassi} bg-[#ffffff1a]`}>
+          <div className={`md:w-[48%] xl:w-[23%] card bg-base-100 shadow-xl md:mr-6 xl:mr-0 ${st.glassi} bg-[#ffffff1a]`}>
             <figure>
-              <Image height={200} src={openai} alt="Album" />
+              <Image height={180}  src={management} alt="Album" />
             </figure>
             <div className="card-body">
-              <h2 className="card-title text-primary">Image by AI</h2>
+              <h2 className="card-title text-primary">Management App</h2>
               <p className="">
-                <strong className="underline">Required items: </strong>React.js, Tailwind Css, Express.js, OpenAI
+                <strong className="underline">Required items: </strong>Next.js, Firebase Auth,
+                Tailwind Css, TypeScript, Prisma
               </p>
               <div className="card-actions justify-end">
-                <Link target="_blank" href='https://aipicgen.onrender.com/'><button className="btn btn-primary">Live</button></Link>
+                <Link target="_blank" href='https://temp-manage.vercel.app/'><button className="btn btn-primary">Live</button></Link>
               </div>
             </div>
           </div>
