@@ -1,3 +1,4 @@
+/* eslint-disable */
 import Image from "next/image";
 import { useContext, useState } from "react";
 import Link from "next/link";
