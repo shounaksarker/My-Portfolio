@@ -30,7 +30,7 @@ const SortPortfolio = () => {
                 <strong className="underline">Required items: </strong>Next.js, Tailwind Css, React-QR-code
               </p>
               <div className="card-actions justify-end">
-                <Link target="_blank" href='https://aipicgen.onrender.com/'><button className="btn btn-primary">Live</button></Link>
+                <Link target="_blank" href='https://eseba.chittaranjandas.com/'><button className="btn btn-primary">Live</button></Link>
               </div>
             </div>
           </div>
