@@ -36,7 +36,7 @@ const Intro = () => {
           <Button className="btn btn-primary">
             <Link
               target="_blank"
-              href="https://drive.google.com/file/d/1TRjCecF9ZFo8cYZE1iZVKtEXmGlB5Nq5/view?usp=sharing"
+              href="https://drive.google.com/file/d/1WtxxGMGQiqFvac2lR2bzWaZaajznzeNc/view?usp=sharing"
             >
               My Resume
             </Link>
