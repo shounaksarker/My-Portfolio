@@ -8,7 +8,8 @@ type propType = {
   technology: string;
   repository: string;
   demo: string;
-  bg?: any;
+  height?: number;
+  width?: number;
 };
 
 const Project = ({
@@ -18,18 +19,19 @@ const Project = ({
   technology,
   repository,
   demo,
-  bg,
+  height,
+  width
 }: propType) => {
   return (
     <div
       className={`md:w-[48%] xl:w-[31%] 2xl:w-[24%] mb-16 py-4 shadow-skill shadow-[#707070] ${
         style.center
-      } ${bg ? "bg-[#6c63ff14]" : ""}`}
+      }`}
     >
       <div className={`${style.frontFace}`}>
         <div className={`${style.front} ${style.content}`}>
-          <div className="px-4">
-            <Image src={img} alt="Project Image" height={300} />
+          <div className="px-4 w-full h-[150px] relative">
+            <Image src={img} alt="Project Image" fill />
           </div>
           <div className=" px-4 mt-6 md:mt-0">
             <h2 className="text-xl mt-3">{title}</h2>
@@ -46,23 +48,23 @@ const Project = ({
         </div>
       </div>
       {/* back side */}
-      <div className={`${style.backFace} p-8`}>
+      <div className={`${style.backFace} p-5 md:p-7`}>
         <div className={`${style.back} ${style.content} text-base md:text-lg xl:text-sm 2xl:text-lg`}>
           <p className="font-light">
             <strong>Technologies: </strong>
             {technology}
           </p>
 
-          <p className="font-light my-5 md:my-2 2xl:my-8">
+          <p className="font-light mt-5 md:my-2 2xl:my-8">
             <strong>Overview: </strong>
             {overview}
           </p>
-          <div className="mt-5 md:mt-8">
-            <button className="btn btn-primary mr-5">
-              <Link href={repository}>Repository</Link>
+          <div className="flex mt-5 md:mt-8">
+            <button className="btn btn-primary mr-2 md:mr-5">
+              <Link target="_blank" href={repository}>Repository</Link>
             </button>
             <button className="btn btn-primary">
-              <Link href={demo}>Demo</Link>
+              <Link target="_blank" href={demo}>Demo</Link>
             </button>
           </div>
         </div>

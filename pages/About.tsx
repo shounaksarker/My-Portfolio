@@ -1,26 +1,54 @@
 /* eslint-disable react/no-unescaped-entities */
 import Image from "next/image";
-// travel pictures
-import cox from "../Imgs/Travel/cx-min.jpeg";
+// travel --- darjeeling
 import darj from "../Imgs/Travel/DarjTea-min.jpeg";
+import darjTBack from "../Imgs/Travel/darjT-min.jpeg";
+import darjWater from "../Imgs/Travel/wtr-min.jpeg";
+import darjMe from "../Imgs/Travel/me-min.jpeg";
+// sikkim
+import sikkimBackGarden from "../Imgs/Travel/skm-min.jpeg";
+import sikkimYellow from "../Imgs/Travel/skm2-min.jpeg";
+import sikkimMgRoad from "../Imgs/Travel/MGmarg-min.jpeg";
+import sikkimMgWindow from "../Imgs/Travel/MgMrg2-min.jpeg";
+// cox-saint
+import saintLv from "../Imgs/Travel/saintLv-min.jpeg";
+import saintDab from "../Imgs/Travel/saintDab-min.jpeg";
+import cxBike from "../Imgs/Travel/cxBike-min.jpeg";
+import cox from "../Imgs/Travel/cx-min.jpeg";
+// other
 import other from "../Imgs/Travel/gpl2-min.jpeg";
-import sikkim from "../Imgs/Travel/MGmarg-min.jpeg";
-// Photography pictures
+import other2 from "../Imgs/Travel/gpl-min.jpeg";
+import other3 from "../Imgs/Travel/mun-min.jpeg";
+import other4 from "../Imgs/Travel/ctgPln-min.jpg";
+// Photography --- river
 import river from "../Imgs/Photography/boatPadma.jpeg";
+import river2 from "../Imgs/Photography/padmaB.jpeg";
+import river3 from "../Imgs/Photography/saintB.jpeg";
+// animal
 import animal from "../Imgs/Photography/cat.jpeg";
+import animal2 from "../Imgs/Photography/bird.jpeg";
+// nature
 import nature from "../Imgs/Photography/DarjNn.jpeg";
+import nature1 from "../Imgs/Photography/tree.jpeg";
+import nature2 from "../Imgs/Photography/darjn.jpeg";
+// others
 import others from "../Imgs/Photography/leg.jpeg";
+import others1 from "../Imgs/Photography/csma.jpeg";
+import others2 from "../Imgs/Photography/sgr.jpeg";
 // others imports
 import Head from "next/head";
 import { useContext, useState } from "react";
 import SingleGallery from "../helperComponent/SingleGallery";
-import education from '../Imgs/Others/education.png';
+import education from "../Imgs/Others/education.png";
+import engineerJob from "../Imgs/Others/engineerJob.png";
 import { AppContext } from "../pages/_app";
+import ExperienceItem from "../components/ExperienceItem";
+import EducationItem from "../components/EducationItem";
 
 // ------------------------------------------------------------------------------
 const Aboutme = () => {
-  const [myTheme, ] = useContext<any>(AppContext);
- 
+  const [myTheme] = useContext<any>(AppContext);
+
   // travel states
   const [dOpen, setDOpen] = useState(false);
   const [sOpen, setSOpen] = useState(false);
@@ -31,136 +59,132 @@ const Aboutme = () => {
   const [riverOpen, setRiverOpen] = useState(false);
   const [animalOpen, setAnimalOpen] = useState(false);
   const [otherOpen, setOtherOpen] = useState(false);
+  // travel pictures
   const darjeeling = [
     {
-      src: "https://i.ibb.co/94ycGsy/Darj-Tea-min.jpg",
-      original: "https://i.ibb.co/94ycGsy/Darj-Tea-min.jpg",
+      src: darj,
+      original: darj.src,
       width: 250,
       height: 174,
-      tags: [{ value: "Darjeling", title: "India" }, ,],
-      caption: "Tea Garden, Darjeling, India",
+      tags: [{ value: "Darjeeling", title: "India" }],
+      caption: "Tea Garden, Darjeeling, India",
     },
     {
-      src: "https://i.ibb.co/Kcgs96Z/me-min.jpg",
-      original: "https://i.ibb.co/Kcgs96Z/me-min.jpg",
-      alt: "Wood Glass",
+      src: darjMe,
+      original: darjMe.src,
       width: 400,
       height: 320,
       tags: [{ value: "Darjeeling", title: "India" }],
       caption: "Mall Road, Darjeeling, India",
     },
     {
-      src: "https://i.ibb.co/DkgHVzc/darj-T-min.jpg",
-      original: "https://i.ibb.co/DkgHVzc/darj-T-min.jpg",
-      alt: "Wood Glass",
+      src: darjTBack,
+      original: darjTBack.src,
       width: 600,
       height: 320,
       tags: [{ value: "Darjeeling", title: "India" }],
       caption: "Tea Garden, Darjeeling, India",
     },
     {
-      src: "https://i.ibb.co/N9vTRph/wtr-min.jpg",
-      original: "https://i.ibb.co/N9vTRph/wtr-min.jpg",
+      src: darjWater,
+      original: darjWater.src,
       width: 292,
       height: 213,
       tags: [{ value: "Darjeeling", title: "India" }],
       caption: "Tista River, India",
     },
   ];
-  // travel pictures
-  const sikim = [
+  
+  const sikkim = [
     {
-      src: "https://i.ibb.co/r75QQ6b/skm-min.jpg",
-      original: "https://i.ibb.co/r75QQ6b/skm-min.jpg",
+      src: sikkimBackGarden,
+      original: sikkimBackGarden.src,
       width: 290,
       height: 212,
-      tags: [{ value: "Sikkim", title: "India" }, ,],
-      caption: "Sikkim, India",
+      tags: [{ value: "Sikkim", title: "India" }],
+      caption: "Sikkim Garden, India",
     },
     {
-      src: "https://i.ibb.co/ZWZNtBD/skm2-min.jpg",
-      original: "https://i.ibb.co/ZWZNtBD/skm2-min.jpg",
-      alt: "Big Ben - London",
+      src: sikkimYellow,
+      original: sikkimYellow.src,
       width: 400,
       height: 320,
       tags: [{ value: "Sikkim", title: "India" }],
       caption: "Sikkim, India",
     },
     {
-      src: "https://i.ibb.co/kyqfKGR/MGmarg-min.jpg",
-      original: "https://i.ibb.co/kyqfKGR/MGmarg-min.jpg",
-      alt: "Wood Glass",
+      src: sikkimMgRoad,
+      original: sikkimMgRoad.src,
       width: 350,
       height: 320,
-      tags: [{ value: "MG marg, Gangtok", title: "India" }],
-      caption: "MG marg statue, Gangtok, India",
+      tags: [{ value: "MG Marg, Gangtok", title: "India" }],
+      caption: "MG Marg statue, Gangtok, India",
     },
     {
-      src: "https://i.ibb.co/zVGMWNf/Mg-Mrg2-min.jpg",
-      original: "https://i.ibb.co/zVGMWNf/Mg-Mrg2-min.jpg",
+      src: sikkimMgWindow,
+      original: sikkimMgWindow.src,
       width: 200,
       height: 148,
       tags: [{ value: "Gangtok", title: "India" }],
       caption: "MG Marg Road, Gangtok, India",
     },
   ];
+  
   const coxBazar = [
     {
-      src: "https://i.ibb.co/r3DLrTL/saint-Lv-min.jpg",
-      original: "https://i.ibb.co/r3DLrTL/saint-Lv-min.jpg",
+      src: saintLv,
+      original: saintLv.src,
       width: 250,
       height: 213,
-      tags: [{ value: "St. Martin", title: "Bangladesh" }, ,],
+      tags: [{ value: "St. Martin", title: "Bangladesh" }],
       caption: "Saint Martin, Coal Island, Bangladesh",
     },
-
     {
-      src: "https://i.ibb.co/tmMb2YH/saint-Dab-min.jpg",
-      original: "https://i.ibb.co/tmMb2YH/saint-Dab-min.jpg",
+      src: saintDab,
+      original: saintDab.src,
       width: 500,
       height: 320,
       tags: [{ value: "St. Martin", title: "Bangladesh" }],
       caption: "Saint Martin, Bangladesh",
     },
     {
-      src: "https://i.ibb.co/nM9zyDt/cx-Bike-min.jpg",
-      original: "https://i.ibb.co/nM9zyDt/cx-Bike-min.jpg",
-      alt: "Red Zone - Paris",
+      src: cxBike,
+      original: cxBike.src,
       width: 245,
       height: 113,
       tags: [{ value: "Cox's Bazar", title: "Bangladesh" }],
-      caption: "Water-bike, Cox's bazar, Bangladesh",
+      caption: "Water-bike, Cox's Bazar, Bangladesh",
     },
     {
-      src: "https://i.ibb.co/XS4SsMD/cx-min.jpg ",
-      original: "https://i.ibb.co/XS4SsMD/cx-min.jpg ",
-      alt: "Wood Glass",
+      src: cox,
+      original: cox.src,
       width: 350,
       height: 320,
       tags: [{ value: "Cox's Bazar", title: "Bangladesh" }],
-      caption: "Sea beach, Cox's bazar, Bangladesh",
+      caption: "Sea beach, Cox's Bazar, Bangladesh",
     },
   ];
+  
   const otherImg = [
     {
-      src: "https://i.ibb.co/Js5fv3m/gpl2-min.jpg",
-      original: "https://i.ibb.co/Js5fv3m/gpl2-min.jpg",
+      src: other,
+      original: other.src,
       width: 400,
       height: 212,
       tags: [{ value: "Gopalganj", title: "Bangladesh" }, ,],
       caption: "Gopalganj, Bangladesh",
     },
     {
-      src: "https://i.ibb.co/xq7r4QX/gpl-min.jpg",
-      original: "https://i.ibb.co/xq7r4QX/gpl-min.jpg",
+      src: other2,
+      original: other2.src,
       width: 210,
       height: 190,
       tags: [{ value: "Gopalgang", title: "Bangladesh" }],
       caption: "Gopalganj, Bangladesh",
     },
     {
-      src: "https://i.ibb.co/jzJZMph/mun-min.jpg",
-      original: "https://i.ibb.co/jzJZMph/mun-min.jpg",
+      src: other3,
+      original: other3.src,
       alt: "Wood Glass",
       width: 550,
       height: 320,
@@ -168,116 +192,176 @@ const Aboutme = () => {
       caption: "Bank of River, Munsiganj, Bangladesh",
     },
     {
-      src: "https://i.ibb.co/L1fZRrj/ctg-Pln-min.jpg",
-      original: "https://i.ibb.co/L1fZRrj/ctg-Pln-min.jpg",
+      src: other4,
+      original: other4.src,
       width: 250,
       height: 183,
       caption: "Chattogram Airport, Ctg, Bangladesh ",
       tags: [{ value: "Chattogram (Airport)", title: "Bangladesh" }, ,],
     },
   ];
+
+  // const otherImg = [
+  //   {
+  //     src: other,
+  //     original: "https://i.ibb.co/Js5fv3m/gpl2-min.jpg",
+  //     width: 400,
+  //     height: 212,
+  //     tags: [{ value: "Gopalganj", title: "Bangladesh" }, ,],
+  //     caption: "Gopalganj, Bangladesh",
+  //   },
+  //   {
+  //     src: other2,
+  //     original: "https://i.ibb.co/xq7r4QX/gpl-min.jpg",
+  //     width: 210,
+  //     height: 190,
+  //     tags: [{ value: "Gopalgang", title: "Bangladesh" }],
+  //     caption: "Gopalganj, Bangladesh",
+  //   },
+  //   {
+  //     src: other3,
+  //     original: "https://i.ibb.co/jzJZMph/mun-min.jpg",
+  //     alt: "Wood Glass",
+  //     width: 550,
+  //     height: 320,
+  //     tags: [{ value: "Munsiganj", title: "Bangladesh" }],
+  //     caption: "Bank of River, Munsiganj, Bangladesh",
+  //   },
+  //   {
+  //     src: other4,
+  //     original: "https://i.ibb.co/L1fZRrj/ctg-Pln-min.jpg",
+  //     width: 250,
+  //     height: 183,
+  //     caption: "Chattogram Airport, Ctg, Bangladesh ",
+  //     tags: [{ value: "Chattogram (Airport)", title: "Bangladesh" }, ,],
+  //   },
+  // ];
   //  photography pictures
   const riverPic = [
     {
-      src: "https://i.ibb.co/ggygRwn/boat-Padma.jpg",
-      original: "https://i.ibb.co/ggygRwn/boat-Padma.jpg",
+      src: river,
+      original: river.src,
       width: 250,
       height: 174,
-      tags: [{ value: "boat", title: "Padma River" }, ,],
+      tags: [{ value: "boat", title: "Padma River" }],
       caption: "Padma River, Bangladesh",
     },
     {
-      src: "https://i.ibb.co/XY0jfW4/padmaB.jpg",
-      original: "https://i.ibb.co/XY0jfW4/padmaB.jpg",
+      src: river2,
+      original: river2.src,
       width: 200,
       height: 148,
       tags: [{ value: "padma bridge", title: "Bangladesh" }],
       caption: "Padma Bridge, Bangladesh",
     },
     {
-      src: "https://i.ibb.co/yk1pRW1/saintB.jpg",
-      original: "https://i.ibb.co/yk1pRW1/saintB.jpg",
+      src: river3,
+      original: river3.src,
       width: 500,
       height: 320,
       tags: [{ value: "St. Martin", title: "Bangladesh" }],
       caption: "Saint Martin, Bangladesh",
     },
   ];
+  
   const naturePic = [
     {
-      src: "https://i.ibb.co/s3ffjFY/tree.jpg",
-      original: "https://i.ibb.co/s3ffjFY/tree.jpg",
-      alt: "Wood Glass",
+      src: nature1,
+      original: nature1.src,
       width: 400,
       height: 320,
       tags: [{ value: "tree", title: "Bangladesh" }],
       caption: "Sunset",
     },
     {
-      src: "https://i.ibb.co/fHyF4rn/DarjNn.jpg",
-      original: "https://i.ibb.co/fHyF4rn/DarjNn.jpg",
-      alt: "Wood Glass",
+      src: nature,
+      original: nature.src,
       width: 600,
       height: 320,
       tags: [{ value: "Darjeeling", title: "India" }],
       caption: "Tista river with cloud, Gangtok, India",
     },
-
     {
-      src: "https://i.ibb.co/ZdBbbMQ/darjn.jpg",
-      original: "https://i.ibb.co/ZdBbbMQ/darjn.jpg",
+      src: nature2,
+      original: nature2.src,
       width: 250,
       height: 213,
-      tags: [{ value: "Darjeeling", title: "India" }, ,],
+      tags: [{ value: "Darjeeling", title: "India" }],
       caption: "Clouds over tea garden, Darjeeling",
     },
   ];
+  
   const animalPic = [
     {
-      src: "https://i.ibb.co/mJbLn61/cat.jpg",
-      original: "https://i.ibb.co/mJbLn61/cat.jpg",
+      src: animal,
+      original: animal.src,
       width: 290,
       height: 212,
-      tags: [{ value: "Cat", title: "bd" }, ,],
+      tags: [{ value: "Cat", title: "bd" }],
       caption: "Love of mother cat",
     },
     {
-      src: "https://i.ibb.co/8bP7RtQ/bird.jpg",
-      original: "https://i.ibb.co/8bP7RtQ/bird.jpg",
-      alt: "Wood Glass",
+      src: animal2,
+      original: animal2.src,
       width: 350,
       height: 320,
       tags: [{ value: "Bird", title: "India" }],
       caption: "Bird showpiece",
     },
   ];
+  
   const othersPic = [
     {
-      src: "https://i.ibb.co/g3X9N1g/csma.jpg",
-      original: "https://i.ibb.co/g3X9N1g/csma.jpg",
+      src: others1,
+      original: others1.src,
       width: 292,
       height: 213,
       tags: [{ value: "chosma", title: "BD" }],
       caption: "River scenario without glass",
     },
     {
-      src: "https://i.ibb.co/JBLWtSz/leg.jpg",
-      original: "https://i.ibb.co/JBLWtSz/leg.jpg",
-      alt: "Big Ben - London",
+      src: others,
+      original: others.src,
       width: 400,
       height: 320,
       tags: [{ value: "Leg", title: "India" }],
       caption: "Walk Alone to the sea",
     },
     {
-      src: "https://i.ibb.co/yXp9xk4/sgr.jpg",
-      original: "https://i.ibb.co/yXp9xk4/sgr.jpg",
+      src: others2,
+      original: others2.src,
       width: 400,
       height: 212,
-      tags: [{ value: "Gopalganj", title: "Bangladesh" }, ,],
+      tags: [{ value: "Gopalganj", title: "Bangladesh" }],
       caption: "Childhood Game",
     },
   ];
+  
+
+  const internResponsibilities = [
+    "Learned and applied Vue.js, Vuex, and many more in real-world projects.",
+    "Assisted in resolving issues across various projects, improving system reliability.",
+    "Fixed errors and bugs in dashboards, contributing to smoother project operations.",
+  ];
+
+  const aseResponsibilities = [
+    "Developed the ride-sharing feature for bike and car rides on the web platform, enhancing the user experience.",
+    "Implemented new features on existing projects, driving continuous product improvement.",
+    "Refactored functions and optimized code to enhance performance and maintainability.",
+  ];
+
+  const se1Responsibilities = [
+    "Extended the ride-sharing feature to rental rides and auto (Tuktuk) rides in Nepal’s cities, broadening service offerings.",
+    "Developed APIs and created logic to support platform's ongoing innovation.",
+    "Identified and fixed errors in multiple projects, ensuring a high level of user satisfaction and system stability.",
+  ];
+
+  const FedResponsibilities = [
+    "Developed E-commerce functionalities such as shopping cart and admin dashboard, making the process 40% faster than before.",
+    "Developed and designed a responsive company website that increased user engagement by 30%.",
+    "Integrated Firebase for real-time data storage and collaborated with teams to meet client expectations.",
+  ];
+
   return (
     <div>
       <Head>
@@ -287,10 +371,16 @@ const Aboutme = () => {
       </Head>
       <div className="lg:min-h-screen flex justify-center">
         <div className="p-8">
-        <h2 className={`font-oleo underline decoration-wavy decoration-2 text-7xl text-center text-primary ${(myTheme == "light") || (myTheme == "emerald") || (myTheme == "luxury") ? "drop-shadow-titleBlack" : "drop-shadow-titleWhite"}`} >
-          About me
-        </h2>
-          
+          <h2
+            className={`font-oleo underline underline-offset-4 decoration-wavy decoration-2 text-7xl text-center text-primary ${
+              myTheme == "light" || myTheme == "emerald" || myTheme == "luxury"
+                ? "drop-shadow-titleBlack"
+                : "drop-shadow-titleWhite"
+            }`}
+          >
+            About me
+          </h2>
+
           <h4 className="text-lg text-center text-[#aeaeae]">
             Find out who I am, where I'm from and what I'm all about.
           </h4>
@@ -298,135 +388,104 @@ const Aboutme = () => {
           {/* ====== about me text ====== */}
           <div className="text-lg md:text-xl font-thin text-justify mt-8 mb-12 leading-7">
             <p className="mb-5">
-              My name is Shounak. I'm a basically part-time front end web
-              developer and full time student based in Dhaka, Bangladesh.
-              Currently I'm doing my B.Sc. (Hons.) in Electronics and
-              Communication Engineering. Most probably my B.Sc will be finised around july, 2023.
-            </p>
-            {/* <blockquote className='mx-[10%] my-[2%] p-[3%] bg-[#ededed] shadow-inner shadow-slate-400'>
-            By the way You are going to read about me. Not about my skills. If you want to skip this page and know about my skills then go to SKILL page.
-          </blockquote> */}
-            <p className="mb-5">
-              Though class lectures are about electrical and electronics based
-              but I like to read programming related topics, blogs or
-              articles. Want to know about a interesting line about me? "I love
-              traffic jam..." Funny...!! &#128518; Yeah, in that time I can think or
-              learn new things, can take rest after working at night. I learnt
-              JavaScript's basic within this traffic jam.
-            </p>
-            <p className="mb-5">
-              Basically I'm fast learner and very keen to learn. Obviously not
-              any bookish element. I'm keen to learn new and trendy technology.
-              Recently learnt: React, NextJs, Sass/Scss, GSAP, Adobe xd and Tailwind Css.
-              I'm ready to take any side project. If you want to contact with
-              me, please don't hesitate. And last, I like coffee. Don't think twice to
-              offer me a coffee for any kind of query. &#128540; Just knock me.
+              I’m <b>Shounak</b>, a dedicated Software Engineer, currently
+              working at <b>Pathao Ltd.</b>, a leading digital platform in
+              Bangladesh, where I help to shape the future of Bangladesh’s
+              digital services. My journey at Pathao has been marked by the
+              development of features like a ride-sharing option on the web
+              platform, which has added significant value to the user
+              experience. <br /> <br /> My work is not limited to new
+              developments; I also focus on refining existing systems by
+              identifying and fixing issues to enhance overall system
+              performance. I’m passionate about using technology to create
+              innovative and practical solutions that solve real-world problems.
             </p>
           </div>
 
+          {/*  ====== Experience section ====== */}
+          <section className="mb-6">
+            <h4 className="text-2xl underline underline-offset-4">
+              Experience:
+            </h4>
+            <div className="container md:px-5 pt-4 pb-10 md:pb-14 mx-auto flex flex-wrap">
+              <div className="flex flex-col lg:flex-row flex-wrap w-full justify-around items-center">
+                {/* left div - step  */}
+                <div className="lg:w-3/5 lg:pr-10 lg:py-6">
+                  {/* SE-I */}
+                  <ExperienceItem
+                    position="Software Engineer-I"
+                    companyName="Pathao Ltd."
+                    jobDate="Jul, 2024 - Present"
+                    responsibilities={se1Responsibilities}
+                  />
+
+                  {/* Associate SE */}
+                  <ExperienceItem
+                    position="Associate Software Engineer"
+                    companyName="Pathao Ltd."
+                    jobDate="Apr, 2024 - Jun, 2024"
+                    responsibilities={aseResponsibilities}
+                  />
+                  {/* Intern */}
+                  <ExperienceItem
+                    position="Intern Software Engineer"
+                    companyName="Pathao Ltd."
+                    jobDate="Dec, 2023 - Mar, 2024"
+                    responsibilities={internResponsibilities}
+                  />
+                  {/* Intern */}
+                  <ExperienceItem
+                    position="Frontend Developer"
+                    companyName="Devfirm Ltd."
+                    jobDate="Jun, 2023 - Nov, 2023"
+                    responsibilities={FedResponsibilities}
+                    className="!pb-0"
+                  />
+                </div>
+                <Image
+                  className="lg:w-2/5 lg:max-w-[500px] object-cover object-center rounded-lg lg:mt-0 mt-12"
+                  src={engineerJob}
+                  width={400}
+                  alt="step"
+                />
+              </div>
+            </div>
+          </section>
+
           {/*  ====== Education section ====== */}
-          <h4 className="text-2xl underline">Education:</h4>
           <section>
-            {/* steps  */}
-            <div className="container px-5 pt-12 pb-24 mx-auto flex flex-wrap">
+            <h4 className="text-2xl underline">Education:</h4>
+            <div className="container md:px-5 pt-4 pb-24 mx-auto flex flex-wrap">
               <div className="flex flex-wrap w-full justify-around items-center">
                 {/* left div - step  */}
                 <div className="md:w-3/5 md:pr-10 md:py-6">
-                  <div className="flex relative pb-12 ">
-                    <div className="h-full w-10 absolute inset-0 flex items-center justify-center">
-                      <div className="h-full w-1 bg-gray-200 pointer-events-none"></div>
-                    </div>
-                    <div className="flex-shrink-0 w-10 h-10 rounded-full bg-primary inline-flex items-center justify-center text-white relative z-10">
-                      <svg
-                        fill="none"
-                        stroke="currentColor"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth="2"
-                        className="w-5 h-5"
-                        viewBox="0 0 24 24"
-                      >
-                        <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
-                        <path d="M22 4L12 14.01l-3-3"></path>
-                      </svg>
-                    </div>
-                  {/* ssc */}
-                    <div className="flex-grow pl-4">
-                      <h2 className="font-bold underline underline-offset-4 title-font text-md mb-1 tracking-wider">
-                        SSC
-                      </h2>
-                      <p className="leading-relaxed italic">
-                        Motijheel Govt. Boys' High School.
-                      </p>
-                      <p className="leading-relaxed">
-                        Passing Year: 2015,&emsp; GPA: 5.00
-                      </p>
-                    </div>
-                  </div>
-                  {/* hsc */}
-                  <div className="flex relative pb-12">
-                    <div className="h-full w-10 absolute inset-0 flex items-center justify-center">
-                      <div className="h-full w-1 bg-gray-200 pointer-events-none"></div>
-                    </div>
-                    <div className="flex-shrink-0 w-10 h-10 rounded-full bg-primary inline-flex items-center justify-center text-white relative z-10">
-                      <svg
-                        fill="none"
-                        stroke="currentColor"
-                        // stroke-linecap="round"
-                        // stroke-linejoin="round"
-                        stroke-width="2"
-                        className="w-5 h-5"
-                        viewBox="0 0 24 24"
-                      >
-                        <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
-                        <path d="M22 4L12 14.01l-3-3"></path>
-                      </svg>
-                    </div>
-                    <div className="flex-grow pl-4">
-                    <h2 className="font-bold underline underline-offset-4 title-font text-md mb-1 tracking-wider">
-                        HSC
-                      </h2>
-                      <p className="leading-relaxed italic">
-                        Govt. Science College.
-                      </p>
-                      <p className="leading-relaxed">
-                        Passing Year: 2017,&emsp; GPA: 4.67
-                      </p>
-                    </div>
-                  </div>
-                  {/* Hons */}
-                  <div className="flex relative ">
-                    <div className="h-full w-10 absolute inset-0 flex items-center justify-center">
-                      <div className="h-full w-1 bg-gray-200 pointer-events-none"></div>
-                    </div>
-                    <div className="flex-shrink-0 w-10 h-10 rounded-full bg-primary inline-flex items-center justify-center text-white relative z-10">
-                      <svg
-                        fill="none"
-                        stroke="currentColor"
-                        // stroke-linecap="round"
-                        // stroke-linejoin="round"
-                        stroke-width="2"
-                        className="w-5 h-5"
-                        viewBox="0 0 24 24"
-                      >
-                        <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
-                        <path d="M22 4L12 14.01l-3-3"></path>
-                      </svg>
-                    </div>
-                    <div className="flex-grow pl-4">
-                    <h2 className="font-bold underline underline-offset-4 title-font text-md mb-1 tracking-wider">
-                        B.Sc
-                      </h2>
-                      <p className="leading-relaxed italic">
-                        Institute of Science and Technology
-                      </p>
-                      <p className="leading-relaxed">
-                      Dept: Electronics & Communication Engineering<br/>Session: 2017-18,&emsp; GPA: 3.1 (Running, Last year)
-                      </p>
-                    </div>
-                  </div>
+                  <EducationItem
+                    exam="SSC"
+                    institute="Motijheel Govt. Boys High School"
+                    passingYear="2015"
+                    result="5.00"
+                  />
+                  <EducationItem
+                    exam="HSC"
+                    institute="Govt. Science College"
+                    passingYear="2017"
+                    result="4.67"
+                  />
+                  <EducationItem
+                    exam="B.Sc"
+                    institute="Institute of Science and Technology"
+                    session="2017-18"
+                    result="3.18"
+                    dept="Electronics & Communication Engineering"
+                    className="!p-0"
+                  />
                 </div>
-                <Image className="md:w-2/5 object-cover object-center rounded-lg lg:mt-0 mt-12" src={education} width={400}  alt="step"></Image>
+                <Image
+                  className="md:w-2/5 md:max-w-[400px] object-cover object-center rounded-lg lg:mt-0 mt-12"
+                  src={education}
+                  width={400}
+                  alt="step"
+                />
               </div>
             </div>
           </section>
@@ -435,14 +494,20 @@ const Aboutme = () => {
 
           <h4 className="text-2xl underline">Hobbies:</h4>
           <h3 className="text-xl font-thin text-justify my-8 leading-7">
-            <strong>Travelling </strong> and <strong>Photography</strong> are my
-            hobbies. I like to travel with team. It is one kind of natural
-            medicine to me for keeping me fresh and sound. Another one is
-            photography. I like to capture the beauty of nature and the memories
-            of my mates. Here is some of my travel memories and photography..
+            I have a deep passion for <strong>Travelling </strong> and{" "}
+            <strong>Photography</strong>, which allows me to capture the beauty
+            of diverse cultures, landscapes, and moments. Whether it's the
+            vibrant streets of a bustling city or the serene stillness of
+            nature, I find joy in documenting the world through my lens. Each
+            journey fuels my creativity, inspiring me to tell compelling visual
+            stories.
           </h3>
           {/* ====== travel section ====== */}
-          <h3 className={`text-center text-2xl ${myTheme !== "luxury" && "text-white"} underline my-12 py-3 bg-primary`}>
+          <h3
+            className={`text-center text-2xl ${
+              myTheme !== "luxury" && "text-white"
+            } underline my-12 py-3 bg-primary`}
+          >
             Travel Gallery
           </h3>
           <div className="flex flex-wrap justify-center items-center md:space-y-5 xl:space-y-0 xl:space-x-5">
@@ -470,11 +535,11 @@ const Aboutme = () => {
             >
               <h5 className="text-lg text-center">Sikkim</h5>
               <Image
-                src={sikkim}
+                src={sikkimMgRoad}
                 alt="imageD"
                 className="cursor-hand h-[350px] rounded-2xl"
               />
-              <SingleGallery images={sikim} open={sOpen} setOpen={setSOpen} />
+              <SingleGallery images={sikkim} open={sOpen} setOpen={setSOpen} />
             </div>
             {/* ====== Cox's Bazar Gallery ====== */}
             <div
@@ -512,7 +577,11 @@ const Aboutme = () => {
             </div>
           </div>
           {/* ====== Photograhy section ====== */}
-          <h3 className={`text-center text-2xl ${myTheme !== "luxury" && "text-white"} underline mt-20 mb-12 py-3 bg-primary`}>
+          <h3
+            className={`text-center text-2xl ${
+              myTheme !== "luxury" && "text-white"
+            } underline mt-20 mb-12 py-3 bg-primary`}
+          >
             Photography Gallery
           </h3>
           <div className="flex flex-wrap justify-center items-center md:space-y-5 xl:space-y-0 xl:space-x-5">

@@ -13,8 +13,24 @@ import { AppContext } from "../../pages/_app";
 import style from "../../styles/component.module.css";
 
 const ShortSkill = () => {
-  const [myTheme, ] = useContext<any>(AppContext);
-  
+  const [myTheme] = useContext<any>(AppContext);
+  const skills = [
+    "HTML",
+    "CSS",
+    "TailwindCSS",
+    "Bootstrap",
+    "JavaScript",
+    "React.js",
+    "Next.js",
+    "Vue.js",
+    "Node.js",
+    "Express",
+    "MongoDB",
+    "MySQL",
+    "C++",
+    "TypeScript",
+  ];
+
   return (
     <div className="w-full relative">
       {/* side round ball start */}
@@ -24,18 +40,31 @@ const ShortSkill = () => {
       before:bg-gradient-to-r before:from-[#E33A4E] before:to-[#513A8F]`}
       >
         {/* side round ball end */}
-        <h1 className="text-5xl md:text-7xl text-center font-Segoe font-oleo underline decoration-wavy decoration-2 mb-6 text-white">
+        <h1 className="text-5xl md:text-7xl text-center font-Segoe font-oleo underline underline-offset-4 decoration-wavy decoration-2 mb-6 text-white">
           Skills
         </h1>
-        <div className="lg:flex items-center justify-evenly"> 
+        <div className="lg:flex items-center justify-evenly">
           {/* Image   */}
           <div className="lg:w-2/5 lg:order-last mb-5">
-            <Image 
-            src={(myTheme === "emerald") || (myTheme === "forest") ? skillGreen : ((myTheme === "luxury") ? skillWhite : ((myTheme === "halloween") ? skillOrange : (myTheme === "synthwave") || (myTheme === "dracula")? skillPink : skill))}
-            width={500} alt="img" className='mx-auto'/>
+            <Image
+              src={
+                myTheme === "emerald" || myTheme === "forest"
+                  ? skillGreen
+                  : myTheme === "luxury"
+                  ? skillWhite
+                  : myTheme === "halloween"
+                  ? skillOrange
+                  : myTheme === "synthwave" || myTheme === "dracula"
+                  ? skillPink
+                  : skill
+              }
+              width={500}
+              alt="img"
+              className="mx-auto"
+            />
           </div>
           {/* Skill Bars  */}
-          <div className="lg:w-3/5 lg:order-first lg:px-6">
+          {/* <div className="lg:w-3/5 lg:order-first lg:px-6">
             <div>
               <ProgressBar
                 completed={90}
@@ -49,7 +78,7 @@ const ShortSkill = () => {
                 className="mb-3"
               />
               <ProgressBar
-                completed={70}
+                completed={85}
                 bgColor="#38BDF8"
                 borderRadius="20px"
                 labelAlignment="left"
@@ -60,7 +89,7 @@ const ShortSkill = () => {
                 className="mb-3"
               />
               <ProgressBar
-                completed={90}
+                completed={75}
                 bgColor="#7410F0"
                 borderRadius="20px"
                 labelAlignment="left"
@@ -93,7 +122,18 @@ const ShortSkill = () => {
                 className="mb-3"
               />
               <ProgressBar
-                completed={40}
+                completed={70}
+                bgColor="#207196"
+                borderRadius="20px"
+                labelAlignment="left"
+                baseBgColor="#e8e8e6"
+                labelColor="#fff"
+                customLabel="Vue.Js"
+                height="26px"
+                className="mb-3"
+              />
+              <ProgressBar
+                completed={65}
                 bgColor="#88B85C"
                 borderRadius="20px"
                 labelAlignment="left"
@@ -104,24 +144,13 @@ const ShortSkill = () => {
                 className="mb-3"
               />
               <ProgressBar
-                completed={30}
+                completed={55}
                 bgColor="#429543"
                 borderRadius="20px"
                 labelAlignment="left"
                 baseBgColor="#e8e8e6"
                 labelColor="#fff"
-                customLabel="MongoDB"
-                height="26px"
-                className="mb-3"
-              />
-              <ProgressBar
-                completed={35}
-                bgColor="#207196"
-                borderRadius="20px"
-                labelAlignment="left"
-                baseBgColor="#e8e8e6"
-                labelColor="#fff"
-                customLabel="Wordpress"
+                customLabel="MongoDB / MySql"
                 height="26px"
                 className="mb-3"
               />
@@ -140,6 +169,20 @@ const ShortSkill = () => {
             <Button className="btn btn-primary">
               <Link href="/Skills">Expand</Link>
             </Button>
+          </div> */}
+          <div className="lg:w-3/5 lg:order-first lg:px-6">
+            <div className="flex flex-wrap gap-6">
+              {skills.map((skill: string, i: number) => {
+                return (
+                  <div
+                    key={i}
+                    className="border rounded-sm px-2 py-2 w-full bg-slate-700 text-white max-w-[150px] text-center"
+                  >
+                    {skill}
+                  </div>
+                );
+              })}
+            </div>
           </div>
         </div>
       </div>

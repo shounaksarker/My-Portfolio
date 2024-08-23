@@ -2,14 +2,16 @@
 import Image from "next/image";
 import { useContext, useState } from "react";
 import Link from "next/link";
-// import all from "../../Imgs/Others/allCourses.png";
 import mine from "../../Imgs/portfolio/mine.png";
+import mine2 from "../../Imgs/portfolio/mine2.jpg";
+import mine3 from "../../Imgs/portfolio/mine3.jpg";
 import fed from "../../Imgs/Others/FED.jpeg";
 import PWJ from "../../Imgs/Others/PWJ.jpeg";
 import RB from "../../Imgs/Others/RB.jpeg";
 import { AppContext } from "../../pages/_app";
 import style from "../../styles/component.module.css";
 import SingleGallery from "../../helperComponent/SingleGallery";
+import AchivementItem from "../AchivementItem";
 
 const ShortAchivement = () => {
   const [myTheme,] = useContext<any>(AppContext);
@@ -17,20 +19,20 @@ const ShortAchivement = () => {
 
   const myImgs = [
     {
-      src: "https://i.ibb.co/xMf8dx7/IMG20230531134701-03.jpg",
-      original: "https://i.ibb.co/xMf8dx7/IMG20230531134701-03.jpg",
+      src: mine2,
+      original: mine2.src,
       alt: "with Mayor",
       width: 400,
       height: 320,
-      tags: [{ value: "Darjeeling", title: "India" }],
+      tags: [{ value: "Prize", title: "BD" }],
       caption: "Showing the Certificate verify project for the resident of ward no-5",
     },
     {
-      src: "https://i.ibb.co/tBrsspd/IMG-20230601-WA0000-01.jpg",
-      original: "https://i.ibb.co/tBrsspd/IMG-20230601-WA0000-01.jpg",
+      src: mine3,
+      original: mine3.src,
       width: 250,
       height: 174,
-      tags: [{ value: "Darjeling", title: "India" }, ,],
+      tags: [{ value: "Prize", title: "BD" }, ,],
       caption: "With Mayor, MP and Councilor",
     },
   ];
@@ -46,144 +48,10 @@ const ShortAchivement = () => {
         <h1 className="text-5xl md:text-7xl text-center font-oleo underline decoration-wavy decoration-2 mb-6 text-white">
           Achievement
         </h1>
-        <div className="md:flex md:flex-wrap justify-center space-y-5 lg:space-y-0">
-          {/* 1st div  */}
-          <div className="md:w-[48%] xl:w-[23%] card bg-base-100 shadow-xl md:mr-6 bg-[#ffffff1a]">
-            {/* modal opening */}
-            <label htmlFor="my-modal-1">
-              <figure className="cursor-grabbing">
-                <Image src={fed} alt="Introduction to frontend development" />
-              </figure>
-            </label>
-            {/* modal */}
-            <input type="checkbox" id="my-modal-1" className="modal-toggle" />
-            <label htmlFor="my-modal-1" className="modal cursor-auto">
-              <label
-                className="modal-box relative md:min-w-[50vw] md:min-h-[50vh]"
-                htmlFor=""
-              >
-                <Image src={fed} alt="Introduction to frontend development" />
-                <div className="modal-action">
-                  <label htmlFor="my-modal-1" className="btn">
-                    X
-                  </label>
-                </div>
-              </label>
-            </label>
-            {/* modal end  */}
-
-            <div className={`card-body ${(myTheme !== "luxury") && "text-white"} ${(myTheme === "light") && "bg-white/50"}`}>
-              <h2 className="card-title text-primary">
-                Introduction of Frontend development
-              </h2>
-              <p>
-                <strong>Platform: </strong>Coursera
-              </p>
-              <div className="flex card-actions justify-between items-center">
-                <span>
-                  <strong>Grade:</strong> 93.40%
-                </span>
-                <button className="btn btn-primary">
-                  <Link
-                    target="_blank"
-                    href="https://www.coursera.org/account/accomplishments/verify/HGCQ7F3EENEW"
-                  >
-                    Verify
-                  </Link>
-                </button>
-              </div>
-            </div>
-          </div>
-          {/* 2nd div  */}
-          <div className="md:w-[48%] xl:w-[23%] card bg-base-100 shadow-xl xl:mr-6 bg-[#ffffff1a]">
-            {/* modal opening */}
-            <label htmlFor="my-modal-2">
-              <figure className="cursor-grabbing">
-                <Image src={PWJ} alt="Programming With JavaScript" />
-              </figure>
-            </label>
-            {/* modal */}
-            <input type="checkbox" id="my-modal-2" className="modal-toggle" />
-            <label htmlFor="my-modal-2" className="modal cursor-auto">
-              <label
-                className="modal-box relative md:min-w-[50vw] md:min-h-[50vh]"
-                htmlFor=""
-              >
-                <Image src={PWJ} alt="Programming With JavaScript" />
-                <div className="modal-action">
-                  <label htmlFor="my-modal-2" className="btn">
-                    X
-                  </label>
-                </div>
-              </label>
-            </label>
-            {/* modal end  */}
-
-            <div className={`card-body ${(myTheme !== "luxury") && "text-white"} ${(myTheme === "light") && "bg-white/50"}`}>
-              <h2 className="card-title text-primary">Programming With JavaScript</h2>
-              <p>
-                <strong>Platform: </strong>Coursera
-              </p>
-              <div className="flex card-actions justify-between items-center">
-                <span>
-                  <strong>Grade:</strong> 95.33%
-                </span>
-                <button className="btn btn-primary">
-                  <Link
-                    target="_blank"
-                    href="https://www.coursera.org/account/accomplishments/verify/Z55ESLSJ3RK4"
-                  >
-                    Verify
-                  </Link>
-                </button>
-              </div>
-            </div>
-          </div>
-          {/* 3rd div  */}
-          <div className="md:w-[48%] xl:w-[23%] card bg-base-100 shadow-xl md:mr-6 bg-[#ffffff1a]">
-            {/* modal opening */}
-            <label htmlFor="my-modal-3">
-              <figure className="cursor-grabbing">
-                <Image src={RB} alt="React Basic" />
-              </figure>
-            </label>
-            {/* modal */}
-            <input type="checkbox" id="my-modal-3" className="modal-toggle" />
-            <label htmlFor="my-modal-3" className="modal cursor-auto">
-              <label
-                className="modal-box relative md:min-w-[50vw] md:min-h-[50vh]"
-                htmlFor=""
-              >
-                <Image src={RB} alt="React Basic" />
-                <div className="modal-action">
-                  <label htmlFor="my-modal-3" className="btn">
-                    X
-                  </label>
-                </div>
-              </label>
-            </label>
-            {/* modal end  */}
-
-            <div className={`card-body ${(myTheme !== "luxury") && "text-white"} ${(myTheme === "light") && "bg-white/50"}`}>
-              <h2 className="card-title text-primary">React Basic</h2>
-              <p>
-                <strong>Platform: </strong>Coursera
-              </p>
-              <div className="flex card-actions justify-between items-center">
-                <span>
-                  <strong>Grade:</strong> 97.50%
-                </span>
-                <button className="btn btn-primary">
-                  <Link
-                    target="_blank"
-                    href="https://www.coursera.org/account/accomplishments/verify/PF8B6U26NAWY"
-                  >
-                    Verify
-                  </Link>
-                </button>
-              </div>
-            </div>
-          </div>
+        <div className="md:flex md:flex-wrap justify-center space-y-5 xl:space-y-0">
+          <AchivementItem img={fed} title={'Introduction of Frontend development'} platform={'Coursera'} grade={93.40} link={'https://www.coursera.org/account/accomplishments/verify/HGCQ7F3EENEW'} />
+          <AchivementItem img={PWJ} title={'Programming With JavaScript'} platform={'Coursera'} grade={95.33} link={'https://www.coursera.org/account/accomplishments/verify/Z55ESLSJ3RK4'} />
+          <AchivementItem img={RB} title={'React Basic'} platform={'Coursera'} grade={97.50} link={'https://www.coursera.org/account/accomplishments/verify/PF8B6U26NAWY'} />
           {/* last div  */}
           <div className="cursor-grabbing md:w-[48%] xl:w-[23%] card bg-base-100 shadow-xl bg-[#ffffff1a]" onClick={() => setDOpen(true)}>
             <figure>
@@ -194,8 +62,8 @@ const ShortAchivement = () => {
               setOpen={setDOpen}
             />
             </figure>
-            <div className={`card-body ${(myTheme !== "luxury") && "text-white"} ${(myTheme === "light") && "bg-white/50"}`}>
-              <h2 className="card-title text-primary">
+            <div className={`card-body lg:text-sm ${(myTheme !== "luxury") && "text-white"} ${(myTheme === "light") && "bg-white/50"}`}>
+              <h2 className="card-title text-primary lg:text-base">
                 Showing the project "E-sheba" infront of
               </h2>
               <p>the Mayor of Dhaka South City Corporation, MP and Councilor</p>

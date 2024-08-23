@@ -2,7 +2,6 @@
 import Head from "next/head";
 import { useContext } from "react";
 import Project from "../helperComponent/Project";
-import auth from "../Imgs/portfolio/auth.png";
 import blood from "../Imgs/portfolio/blood.png";
 import management from "../Imgs/portfolio/management.png";
 import netflix from "../Imgs/portfolio/netflix.png";
@@ -10,6 +9,9 @@ import numberGuess from "../Imgs/portfolio/numberGuess.png";
 import openai from "../Imgs/portfolio/openai.png";
 import powerOdd from "../Imgs/portfolio/powerOdd.png";
 import weather from "../Imgs/portfolio/weather.png";
+import shareRide from "../Imgs/portfolio/shareRide.png";
+import fintrackerio from "../Imgs/portfolio/fintrackerio.png";
+import certi from "../Imgs/portfolio/certi.png";
 import { AppContext } from "../pages/_app";
 
 const Portfolio = () => {
@@ -24,7 +26,7 @@ const Portfolio = () => {
       <div className="lg:min-h-screen flex justify-center">
         <div className="p-8">
           <h2
-            className={`font-oleo underline decoration-wavy decoration-2 text-7xl text-center text-primary ${
+            className={`font-oleo underline underline-offset-4 decoration-wavy decoration-2 text-7xl text-center text-primary ${
               myTheme == "light" || myTheme == "emerald" || myTheme == "luxury"
                 ? "drop-shadow-titleBlack"
                 : "drop-shadow-titleWhite"
@@ -37,16 +39,35 @@ const Portfolio = () => {
             interested to hire me
           </h4>
           {/* portfolio start */}
-          <div className="mt-12 text-lg md:flex md:flex-wrap gap-4">
-            {/* Management app */}
+          <div className="portfolio mt-12 text-lg md:flex md:flex-wrap gap-4">
+            {/* FintrackerIO app */}
             <Project
-              img={management}
-              title="Management App"
-              overview="A management app for tracing all income and expense of a religious organization."
-              technology="Next.JS, Firebase,TypeScipt, Tailwind Css, Prisma."
-              repository="https://github.com/shounaksarker/ManagementApp"
-              demo="https://temp-manage.vercel.app"
-              bg
+              img={fintrackerio}
+              title="Finance Tracker"
+              overview="Finance tracking app for recording all income and expense of each date, month & year."
+              technology="Next.JS, Tailwind Css, Express.js, MySql."
+              repository="https://github.com/shounaksarker"
+              demo="https://fintrackerio-stage.vercel.app/"
+            />
+            {/* Certificate Validation */}
+            <Project
+              img={certi}
+              title="Certificate Validation"
+              overview="People of the ward applied and get councilor's certificates through this app."
+              technology="Next.js, Tailwind, Laravel, MySql"
+              repository="https://github.com/shounaksarker"
+              demo="https://auth-snk.web.app/"
+            />
+            {/* Share Ride */}
+            <Project
+              img={shareRide}
+              height={150}
+              width={250}
+              title="Share Ride"
+              overview="People who use Pathao bike/car ride, can share their live location and details with others."
+              technology="React.js, Tailwind, React-leaflet (Map), Rest API"
+              repository="https://github.com/shounaksarker"
+              demo="https://auth-snk.web.app/"
             />
             {/* Netflix */}
             <Project
@@ -65,16 +86,6 @@ const Portfolio = () => {
               technology="React.js, Tailwind Css, Express.js, OpenAI"
               repository="https://github.com/shounaksarker/ai-image-generator"
               demo="https://aipicgen.onrender.com/"
-              bg
-            />
-            {/* Weather App */}
-            <Project
-              img={weather}
-              title="Weather App"
-              overview="This app shows weather details of the day and next 3 days of a city with Bg-img."
-              technology="React, Bootstrap."
-              repository="https://github.com/shounaksarker/weatherApp"
-              demo="https://web-app-snk.netlify.app/"
             />
             {/* Number Guess Game */}
             <Project
@@ -84,16 +95,15 @@ const Portfolio = () => {
               technology="React, React-router, Bootstrap."
               repository="https://number-guess-snk.netlify.app/"
               demo="https://github.com/shounaksarker/Number-guess-game"
-              bg
             />
-            {/* Authentication */}
+            {/* Weather App */}
             <Project
-              img={auth}
-              title="Authentication"
-              overview="User can create account with email and password, and Log in with google."
-              technology="React, Firebase, Bootstrap, React Router"
-              repository="https://github.com/shounaksarker/Authentication"
-              demo="https://auth-snk.web.app/"
+              img={weather}
+              title="Weather App"
+              overview="This app shows weather details of the day and next 3 days of a ci-img."
+              technology="React, Bootstrap."
+              repository="https://github.com/shounaksarker/weatherApp"
+              demo="https://web-app-snk.netlify.app/"
             />
             {/* PowerOdd */}
             <Project
@@ -103,9 +113,16 @@ const Portfolio = () => {
               technology="React, Firebase, Bootstrap, React Router."
               repository="https://github.com/shounaksarker/phone-authentication"
               demo="https://phone-auth-snk.web.app "
-              bg
             />
-
+            {/*Management App */}
+            <Project
+              img={management}
+              title="Management App"
+              overview="A management app for tracing all income and expense of a religious organization."
+              technology="Next.JS, Firebase,TypeScipt, Tailwind Css, Prisma."
+              repository="https://github.com/shounaksarker/ManagementApp"
+              demo="https://temp-manage.vercel.app"
+            />
             {/* Blood App */}
             <Project
               img={blood}

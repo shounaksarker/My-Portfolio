@@ -44,22 +44,22 @@ export default function Home() {
           <link rel="icon" href="/favicon.ico" />
         </Head>
         <progress max="100" value="0" className="z-20"></progress>
-        <section className="mb-36 p-8">
+        <section className="mb-20 xl:mb-36 p-8">
           <Intro />
         </section>
-        <section className="mb-36 p-8">
+        <section className="mb-20 xl:mb-36 p-8">
           <ShortAbout />
         </section>
-        <section className="mb-36" style={skillStyle}>
+        <section className="mb-20 xl:mb-36" style={skillStyle}>
           <div className="bg-[#000000b3] w-full p-8">
             <ShortSkills />
           </div>
         </section>
-        <section className="relative mb-36 p-8">
+        <section className="relative mb-20 xl:mb-36 p-8">
           {/* <AnimateBG/> */}
           <SortPortfolio />
         </section>
-        <section className="mb-36" style={achievementStyle}>
+        <section className="mb-20 xl:mb-36" style={achievementStyle}>
           <div className="bg-[#000000b3] w-full p-8">
             <ShortAchivement />
           </div>

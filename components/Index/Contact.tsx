@@ -51,7 +51,7 @@ const Contact = () => {
       before:right-[-30%] md:before:right-[-15%] lg:before:right-[-10%] xl:before:right-[-5%] 
       before:bg-gradient-to-r before:from-[#E33A4E] before:to-[#513A8F]`}
       >
-        <h1 className="text-5xl md:text-7xl  text-center  font-oleo underline decoration-wavy decoration-2 mb-6">
+        <h1 className="text-5xl md:text-7xl text-center font-oleo underline underline-offset-4 decoration-wavy decoration-2 mb-6">
           Contact Me
         </h1>
 
