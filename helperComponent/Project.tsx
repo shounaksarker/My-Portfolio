@@ -6,7 +6,7 @@ type propType = {
   title: string;
   overview: string;
   technology: string;
-  repository: string;
+  repository?: string;
   demo: string;
   height?: number;
   width?: number;
@@ -37,9 +37,9 @@ const Project = ({
             <h2 className="text-xl mt-3">{title}</h2>
 
             <div className="mt-5 md:mt-6">
-              <button className="btn btn-primary mr-5">
+              {repository && <button className="btn btn-primary mr-5">
                 <Link target="_blank" href={repository}>Repository</Link>
-              </button>
+              </button>}
               <button className="btn btn-primary">
                 <Link target="_blank" href={demo}>Demo</Link>
               </button>
@@ -50,19 +50,18 @@ const Project = ({
       {/* back side */}
       <div className={`${style.backFace} p-5 md:p-7`}>
         <div className={`${style.back} ${style.content} text-base md:text-lg xl:text-sm 2xl:text-lg`}>
-          <p className="font-light">
-            <strong>Technologies: </strong>
-            {technology}
-          </p>
-
           <p className="font-light mt-5 md:my-2 2xl:my-8">
             <strong>Overview: </strong>
             {overview}
           </p>
+          <p className="font-light">
+            <strong>Technologies: </strong>
+            {technology}
+          </p>
           <div className="flex mt-5 md:mt-8">
-            <button className="btn btn-primary mr-2 md:mr-5">
+           {repository && <button className="btn btn-primary mr-2 md:mr-5">
               <Link target="_blank" href={repository}>Repository</Link>
-            </button>
+            </button>}
             <button className="btn btn-primary">
               <Link target="_blank" href={demo}>Demo</Link>
             </button>

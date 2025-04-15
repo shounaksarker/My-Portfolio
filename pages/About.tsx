@@ -352,6 +352,7 @@ const Aboutme = () => {
 
   const se1Responsibilities = [
     "Extended the ride-sharing feature to rental rides and auto (Tuktuk) rides in Nepal’s cities, broadening service offerings.",
+    "Redesigned the UI for BNPL (Buy Now Pay Later) and Pathao Points, improving visual appeal and user accessibility for key user-facing modules.",
     "Developed APIs and created logic to support platform's ongoing innovation.",
     "Identified and fixed errors in multiple projects, ensuring a high level of user satisfaction and system stability.",
   ];
@@ -388,17 +389,13 @@ const Aboutme = () => {
           {/* ====== about me text ====== */}
           <div className="text-lg md:text-xl font-thin text-justify mt-8 mb-12 leading-7">
             <p className="mb-5">
-              I’m <b>Shounak</b>, a dedicated Software Engineer, currently
-              working at <b>Pathao Ltd.</b>, a leading digital platform in
-              Bangladesh, where I help to shape the future of Bangladesh’s
-              digital services. My journey at Pathao has been marked by the
-              development of features like a ride-sharing option on the web
-              platform, which has added significant value to the user
-              experience. <br /> <br /> My work is not limited to new
-              developments; I also focus on refining existing systems by
+              I’m <b>Shounak</b>, a passionate Software Engineer, currently
+              working at <b>Pathao Ltd.</b>, one of Bangladesh’s leading digital platforms. Here, I work at the intersection of technology and user experience, helping build scalable, efficient, and impactful web-based solutions. <br /> <br /> My work is not limited to new developments; I also focus on refining existing systems by
               identifying and fixing issues to enhance overall system
               performance. I’m passionate about using technology to create
-              innovative and practical solutions that solve real-world problems.
+              innovative and practical solutions that solve real-world problems. <br /> <br />
+              During my time at Pathao, I’ve contributed to high-impact projects that millions of users interact with. From developing ride-sharing features for web platforms to redesigning key financial and rewards modules, I focus on crafting intuitive, responsive interfaces backed by solid engineering. <br />
+              I love tackling complex problems, optimizing performance, and enhancing user journeys through thoughtful code and clean UI.
             </p>
           </div>
 

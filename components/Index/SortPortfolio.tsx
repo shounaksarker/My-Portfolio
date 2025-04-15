@@ -18,18 +18,19 @@ const SortPortfolio = () => {
         </h1>
         <div className="md:flex md:flex-wrap justify-center space-y-5 xl:space-y-0 xl:space-x-5">
           <PortfolioItem
-            img={certi}
-            height={220}
-            title={"Certificate Verification"}
-            technology={"Next.js, Tailwind Css, MySql, React-QR-code"}
-            link={"https://eseba.chittaranjandas.com/"}
-          />
-          <PortfolioItem
             img={fintrackerio}
             height={180}
             title={"Finance-tracker"}
             technology={"Next.js, Tailwind Css, Express.js, MySql"}
             link={"https://fintrackerio-stage.vercel.app"}
+          />
+          
+          <PortfolioItem
+            img={certi}
+            height={220}
+            title={"Certificate Verification"}
+            technology={"Next.js, Tailwind Css, MySql, React-QR-code"}
+            link={"https://eseba.chittaranjandas.com/"}
           />
           <PortfolioItem
             img={shareRide}

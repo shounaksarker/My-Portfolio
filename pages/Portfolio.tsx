@@ -46,7 +46,7 @@ const Portfolio = () => {
               title="Finance Tracker"
               overview="Finance tracking app for recording all income and expense of each date, month & year."
               technology="Next.JS, Tailwind Css, Express.js, MySql."
-              repository="https://github.com/shounaksarker"
+              // repository="https://github.com/shounaksarker"
               demo="https://fintrackerio-stage.vercel.app/"
             />
             {/* Certificate Validation */}
@@ -55,8 +55,8 @@ const Portfolio = () => {
               title="Certificate Validation"
               overview="People of the ward applied and get councilor's certificates through this app."
               technology="Next.js, Tailwind, Laravel, MySql"
-              repository="https://github.com/shounaksarker"
-              demo="https://auth-snk.web.app/"
+              // repository="https://github.com/shounaksarker"
+              demo="https://eseba.chittaranjandas.com/"
             />
             {/* Share Ride */}
             <Project
@@ -66,8 +66,8 @@ const Portfolio = () => {
               title="Share Ride"
               overview="People who use Pathao bike/car ride, can share their live location and details with others."
               technology="React.js, Tailwind, React-leaflet (Map), Rest API"
-              repository="https://github.com/shounaksarker"
-              demo="https://auth-snk.web.app/"
+              // repository="https://github.com/shounaksarker"
+              demo="https://pages.pathao.com/share-ride/YY75g6H7cT7AKXnnTY3Cwg=="
             />
             {/* Netflix */}
             <Project
